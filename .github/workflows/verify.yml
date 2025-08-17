@@ -20,11 +20,10 @@ jobs:
       run: pip3 install -U online-judge-verify-helper
 
     - name: Set up Rust (1.70.0)
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: 1.70.0-x86_64-unknown-linux-gnu
-        default: true
-        profile: minimal
+      run: |
+        rustup set profile minimal
+        rustup install 1.70.0
+        rustup override set nightly
 
     # required by cargo-udeps
     # - name: Set up Rust (nightly)
@@ -46,4 +45,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
         GH_PAT: ${{ secrets.GH_PAT }}
-      run: oj-verify all --timeout=6000
+      run: oj-verify all
