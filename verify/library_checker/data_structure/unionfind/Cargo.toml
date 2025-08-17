@@ -1,12 +1,8 @@
 [package]
-name = "verify"
+name = "unionfind"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+dsu = { version = "0.1.0", path = "../../../../crates/ds/dsu" }
 proconio = { version = "0.5.0", features = ["derive"] }
-ds = { path = "../ds" }
-
-[[bin]]
-name = "dsu"
-path = "src/ds/dsu.rs"

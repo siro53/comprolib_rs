@@ -1,6 +1,5 @@
-[package]
-name = "comprolib_rs"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
+[workspace]
+members = [
+    "./crates/ds/*",
+    "./verify/library_checker/data_structure/*"
+]

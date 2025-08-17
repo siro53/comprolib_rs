@@ -86,7 +86,7 @@ impl Dsu {
 
 #[cfg(test)]
 mod tests {
-    use crate::dsu::Dsu;
+    use crate::Dsu;
 
     #[test]
     fn dsu_test() {
