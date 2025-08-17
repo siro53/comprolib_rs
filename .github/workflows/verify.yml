@@ -37,7 +37,7 @@ jobs:
       uses: baptiste0928/cargo-install@v2
       with:
         crate: cargo-udeps
-        version: '0.1.44'
+        version: '0.1.57'
         args: --debug
 
     - name: Run tests
