@@ -1,17 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: ds/src/dsu.rs
     title: ds/src/dsu.rs
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: ds/src/dsu.rs
     title: ds/src/dsu.rs
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/src/ds/dsu.rs
+    title: verify/src/ds/dsu.rs
   _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -29,9 +32,10 @@ data:
   path: ds/src/lib.rs
   requiredBy:
   - ds/src/dsu.rs
-  timestamp: '2025-08-17 12:29:55+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2025-08-17 14:49:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/src/ds/dsu.rs
 documentation_of: ds/src/lib.rs
 layout: document
 redirect_from:

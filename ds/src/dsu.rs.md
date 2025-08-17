@@ -1,17 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: ds/src/lib.rs
     title: ds/src/lib.rs
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: ds/src/lib.rs
     title: ds/src/lib.rs
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/src/ds/dsu.rs
+    title: verify/src/ds/dsu.rs
   _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -22,24 +25,26 @@ data:
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "use std::collections::{BTreeMap, btree_map};\nuse std::mem::swap;\n\npub\
     \ struct Dsu {\n    size: usize,\n    parent_or_size: Vec<i32>,\n}\n\nimpl Dsu\
-    \ {\n    pub fn new(size: usize) -> Self {\n        Dsu {\n            size,\n\
+    \ {\n    pub fn new(size: usize) -> Self {\n        Self {\n            size,\n\
     \            parent_or_size: vec![-1; size],\n        }\n    }\n\n    pub fn leader(&mut\
     \ self, u: usize) -> usize {\n        assert!(u < self.size);\n        if self.parent_or_size[u]\
     \ < 0 {\n            return u;\n        }\n        self.parent_or_size[u] = self.leader(self.parent_or_size[u]\
     \ as usize) as i32;\n        self.parent_or_size[u] as usize\n    }\n\n    pub\
-    \ fn same(&mut self, u: usize, v: usize) -> bool {\n        self.leader(u) ==\
-    \ self.leader(v)\n    }\n\n    pub fn merge(&mut self, u: usize, v: usize) ->\
-    \ bool {\n        let mut lu = self.leader(u);\n        let mut lv = self.leader(v);\n\
-    \        if lu == lv {\n            return false;\n        }\n        if -self.parent_or_size[lu]\
-    \ < -self.parent_or_size[lv] {\n            swap(&mut lu, &mut lv);\n        }\n\
-    \        self.parent_or_size[lu] += self.parent_or_size[lv];\n        self.parent_or_size[lv]\
-    \ = u as i32;\n        true\n    }\n\n    pub fn size(&self, u: usize) -> usize\
-    \ {\n        -self.parent_or_size[u] as usize\n    }\n\n    pub fn groups(&mut\
-    \ self) -> Vec<Vec<usize>> {\n        let mut leaders: Vec<usize> = vec![0; self.size];\n\
-    \        let mut group_size: Vec<usize> = vec![0; self.size];\n        for i in\
-    \ 0..self.size {\n            leaders[i] = self.leader(i);\n            group_size[i]\
-    \ += 1;\n        }\n        let mut groups: Vec<Vec<usize>> = vec![Vec::new();\
-    \ self.size];\n        for i in 0..self.size {\n            groups[i].reserve(group_size[i]);\n\
+    \ fn same(&mut self, u: usize, v: usize) -> bool {\n        assert!(u < self.size);\n\
+    \        assert!(v < self.size);\n        self.leader(u) == self.leader(v)\n \
+    \   }\n\n    pub fn merge(&mut self, u: usize, v: usize) -> usize {\n        assert!(u\
+    \ < self.size);\n        assert!(v < self.size);\n        let mut lu = self.leader(u);\n\
+    \        let mut lv = self.leader(v);\n        if lu == lv {\n            return\
+    \ lu;\n        }\n        if -self.parent_or_size[lu] < -self.parent_or_size[lv]\
+    \ {\n            swap(&mut lu, &mut lv);\n        }\n        self.parent_or_size[lu]\
+    \ += self.parent_or_size[lv];\n        self.parent_or_size[lv] = lu as i32;\n\
+    \        lu\n    }\n\n    pub fn size(&self, u: usize) -> usize {\n        -self.parent_or_size[u]\
+    \ as usize\n    }\n\n    pub fn groups(&mut self) -> Vec<Vec<usize>> {\n     \
+    \   let mut leaders: Vec<usize> = vec![0; self.size];\n        let mut group_size:\
+    \ Vec<usize> = vec![0; self.size];\n        for i in 0..self.size {\n        \
+    \    leaders[i] = self.leader(i);\n            group_size[i] += 1;\n        }\n\
+    \        let mut groups: Vec<Vec<usize>> = vec![Vec::new(); self.size];\n    \
+    \    for i in 0..self.size {\n            groups[i].reserve(group_size[i]);\n\
     \        }\n        for i in 0..self.size {\n            groups[leaders[i]].push(i);\n\
     \        }\n        groups\n            .into_iter()\n            .filter(|group|\
     \ !group.is_empty())\n            .collect()\n    }\n\n    pub fn groups_with_btreemap(&mut\
@@ -62,9 +67,10 @@ data:
   path: ds/src/dsu.rs
   requiredBy:
   - ds/src/lib.rs
-  timestamp: '2025-08-17 12:29:55+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2025-08-17 14:49:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/src/ds/dsu.rs
 documentation_of: ds/src/dsu.rs
 layout: document
 redirect_from:
