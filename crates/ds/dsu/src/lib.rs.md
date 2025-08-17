@@ -1,17 +1,11 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: ds/src/lib.rs
-    title: ds/src/lib.rs
-  _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: ds/src/lib.rs
-    title: ds/src/lib.rs
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/src/ds/dsu.rs
-    title: verify/src/ds/dsu.rs
+    path: verify/library_checker/data_structure/unionfind/src/main.rs
+    title: verify/library_checker/data_structure/unionfind/src/main.rs
   _isVerificationFailed: false
   _pathExtension: rs
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -54,27 +48,25 @@ data:
     \ {\n                e.insert(vec![i]);\n            } else {\n              \
     \  let group = groups.get_mut(&l).unwrap();\n                group.push(i);\n\
     \            }\n        }\n        groups\n    }\n}\n\n#[cfg(test)]\nmod tests\
-    \ {\n    use crate::dsu::Dsu;\n\n    #[test]\n    fn dsu_test() {\n        let\
-    \ mut d = Dsu::new(4);\n        d.merge(0, 1);\n        assert!(d.same(0, 1));\n\
-    \        d.merge(1, 2);\n        assert!(d.same(0, 2));\n        assert_eq!(d.size(0),\
+    \ {\n    use crate::Dsu;\n\n    #[test]\n    fn dsu_test() {\n        let mut\
+    \ d = Dsu::new(4);\n        d.merge(0, 1);\n        assert!(d.same(0, 1));\n \
+    \       d.merge(1, 2);\n        assert!(d.same(0, 2));\n        assert_eq!(d.size(0),\
     \ 3);\n        assert!(!d.same(0, 3));\n        assert_eq!(d.groups(), vec![vec![0,\
     \ 1, 2], vec![3]]);\n        assert_eq!(*d.groups_with_btreemap().get(&0).unwrap(),\
     \ vec![0, 1, 2]);\n        assert_eq!(*d.groups_with_btreemap().get(&3).unwrap(),\
     \ vec![3]);\n    }\n}\n"
-  dependsOn:
-  - ds/src/lib.rs
+  dependsOn: []
   isVerificationFile: false
-  path: ds/src/dsu.rs
-  requiredBy:
-  - ds/src/lib.rs
-  timestamp: '2025-08-17 14:49:46+09:00'
+  path: crates/ds/dsu/src/lib.rs
+  requiredBy: []
+  timestamp: '2025-08-18 07:51:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/src/ds/dsu.rs
-documentation_of: ds/src/dsu.rs
+  - verify/library_checker/data_structure/unionfind/src/main.rs
+documentation_of: crates/ds/dsu/src/lib.rs
 layout: document
 redirect_from:
-- /library/ds/src/dsu.rs
-- /library/ds/src/dsu.rs.html
-title: ds/src/dsu.rs
+- /library/crates/ds/dsu/src/lib.rs
+- /library/crates/ds/dsu/src/lib.rs.html
+title: crates/ds/dsu/src/lib.rs
 ---

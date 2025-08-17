@@ -1,24 +1,16 @@
 ---
 data:
   libraryCategories:
-  - name: ds/src
+  - name: crates/ds/dsu/src
     pages:
     - icon: ':heavy_check_mark:'
-      path: ds/src/dsu.rs
-      title: ds/src/dsu.rs
-    - icon: ':heavy_check_mark:'
-      path: ds/src/lib.rs
-      title: ds/src/lib.rs
-  - name: src
-    pages:
-    - icon: ':warning:'
-      path: src/main.rs
-      title: src/main.rs
+      path: crates/ds/dsu/src/lib.rs
+      title: crates/ds/dsu/src/lib.rs
   verificationCategories:
-  - name: verify/src/ds
+  - name: verify/library_checker/data_structure/unionfind/src
     pages:
     - icon: ':heavy_check_mark:'
-      path: verify/src/ds/dsu.rs
-      title: verify/src/ds/dsu.rs
+      path: verify/library_checker/data_structure/unionfind/src/main.rs
+      title: verify/library_checker/data_structure/unionfind/src/main.rs
 layout: toppage
 ---
