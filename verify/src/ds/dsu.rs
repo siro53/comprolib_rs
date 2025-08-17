@@ -1,8 +1,9 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/unionfind
 
 use ds::dsu::Dsu;
-use proconio::input;
+use proconio::{fastout, input};
 
+#[fastout]
 fn main() {
     input! {
         n: usize,
