@@ -8,7 +8,7 @@ pub struct Dsu {
 
 impl Dsu {
     pub fn new(size: usize) -> Self {
-        Dsu {
+        Self {
             size,
             parent_or_size: vec![-1; size],
         }
@@ -24,21 +24,25 @@ impl Dsu {
     }
 
     pub fn same(&mut self, u: usize, v: usize) -> bool {
+        assert!(u < self.size);
+        assert!(v < self.size);
         self.leader(u) == self.leader(v)
     }
 
-    pub fn merge(&mut self, u: usize, v: usize) -> bool {
+    pub fn merge(&mut self, u: usize, v: usize) -> usize {
+        assert!(u < self.size);
+        assert!(v < self.size);
         let mut lu = self.leader(u);
         let mut lv = self.leader(v);
         if lu == lv {
-            return false;
+            return lu;
         }
         if -self.parent_or_size[lu] < -self.parent_or_size[lv] {
             swap(&mut lu, &mut lv);
         }
         self.parent_or_size[lu] += self.parent_or_size[lv];
-        self.parent_or_size[lv] = u as i32;
-        true
+        self.parent_or_size[lv] = lu as i32;
+        lu
     }
 
     pub fn size(&self, u: usize) -> usize {
