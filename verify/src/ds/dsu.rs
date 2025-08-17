@@ -16,11 +16,12 @@ fn main() {
             u: usize,
             v: usize
         };
-        if t == 0 {
-            uf.merge(u, v);
-        } else {
-            let res = if uf.same(u, v) { 1 } else { 0 };
-            println!("{}", res);
+        match t {
+            0 => {
+                uf.merge(u, v);
+            }
+            1 => println!("{}", uf.same(u, v) as i32),
+            _ => unreachable!(),
         }
     }
 }
