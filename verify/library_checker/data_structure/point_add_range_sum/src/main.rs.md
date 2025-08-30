@@ -34,7 +34,7 @@ data:
     \     p: usize,\n                    x: i64\n                }\n             \
     \   seg.apply(p, x);\n            }\n            1 => {\n                input!\
     \ {\n                    l: usize,\n                    r: usize\n           \
-    \     }\n                println!(\"{}\", seg.prod(l, r));\n            }\n  \
+    \     }\n                println!(\"{}\", seg.prod(l..r));\n            }\n  \
     \          _ => unreachable!(),\n        }\n    }\n}\n"
   dependsOn:
   - crates/ds/segment_tree/segment_tree/src/lib.rs
@@ -42,7 +42,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-31 02:14:19+09:00'
+  timestamp: '2025-08-31 02:27:27+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
