@@ -11,6 +11,15 @@ name = "monoid"
 version = "0.1.0"
 
 [[package]]
+name = "point_add_range_sum"
+version = "0.1.0"
+dependencies = [
+ "monoid",
+ "proconio",
+ "segment_tree",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.95"
 source = "registry+https://github.com/rust-lang/crates.io-index"
