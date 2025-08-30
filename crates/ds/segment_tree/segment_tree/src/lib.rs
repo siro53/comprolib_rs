@@ -9,6 +9,26 @@ where
     node: Vec<M::ValueType>,
 }
 
+impl<M> FromIterator<M::ValueType> for SegmentTree<M>
+where
+    M: Monoid,
+{
+    fn from_iter<T: IntoIterator<Item = M::ValueType>>(iter: T) -> Self {
+        let data = iter.into_iter().collect::<Vec<_>>();
+        let n = data.len();
+        let size = n.next_power_of_two();
+        let mut node = (0..size)
+            .map(|_| M::unit())
+            .chain(data)
+            .chain((0..size - n).map(|_| M::unit()))
+            .collect::<Vec<_>>();
+        for i in (1..size).rev() {
+            node[i] = M::op(&node[i << 1], &node[i << 1 | 1]);
+        }
+        Self { n, size, node }
+    }
+}
+
 impl<M> SegmentTree<M>
 where
     M: Monoid,

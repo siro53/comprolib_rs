@@ -25,10 +25,7 @@ fn main() {
         q: usize,
         a: [i64; n]
     }
-    let mut seg = SegmentTree::<M>::new(n);
-    for i in 0..n {
-        seg.set(i, a[i]);
-    }
+    let mut seg = a.into_iter().collect::<SegmentTree<M>>();
     for _ in 0..q {
         input! {
             t: usize
