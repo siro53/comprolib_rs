@@ -22,14 +22,22 @@ data:
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "use monoid::Monoid;\n\npub struct SegmentTree<M>\nwhere\n    M: Monoid,\n\
     {\n    n: usize,\n    size: usize,\n    node: Vec<M::ValueType>,\n}\n\nimpl<M>\
-    \ SegmentTree<M>\nwhere\n    M: Monoid,\n{\n    pub fn new(n: usize) -> Self {\n\
-    \        let size = n.next_power_of_two();\n        let node = vec![M::unit();\
-    \ size * 2];\n        Self { n, size, node }\n    }\n\n    pub fn set(&mut self,\
-    \ pos: usize, value: M::ValueType) {\n        assert!(pos < self.n);\n       \
-    \ let mut pos = pos + self.size;\n        self.node[pos] = value;\n        while\
-    \ pos > 1 {\n            pos >>= 1;\n            self.node[pos] = M::op(&self.node[pos\
-    \ << 1], &self.node[pos << 1 | 1]);\n        }\n    }\n\n    pub fn get(&self,\
-    \ pos: usize) -> M::ValueType {\n        assert!(pos < self.n);\n        self.node[pos\
+    \ FromIterator<M::ValueType> for SegmentTree<M>\nwhere\n    M: Monoid,\n{\n  \
+    \  fn from_iter<T: IntoIterator<Item = M::ValueType>>(iter: T) -> Self {\n   \
+    \     let data = iter.into_iter().collect::<Vec<_>>();\n        let n = data.len();\n\
+    \        let size = n.next_power_of_two();\n        let mut node = (0..size)\n\
+    \            .map(|_| M::unit())\n            .chain(data)\n            .chain((0..size\
+    \ - n).map(|_| M::unit()))\n            .collect::<Vec<_>>();\n        for i in\
+    \ (1..size).rev() {\n            node[i] = M::op(&node[i << 1], &node[i << 1 |\
+    \ 1]);\n        }\n        Self { n, size, node }\n    }\n}\n\nimpl<M> SegmentTree<M>\n\
+    where\n    M: Monoid,\n{\n    pub fn new(n: usize) -> Self {\n        let size\
+    \ = n.next_power_of_two();\n        let node = vec![M::unit(); size * 2];\n  \
+    \      Self { n, size, node }\n    }\n\n    pub fn set(&mut self, pos: usize,\
+    \ value: M::ValueType) {\n        assert!(pos < self.n);\n        let mut pos\
+    \ = pos + self.size;\n        self.node[pos] = value;\n        while pos > 1 {\n\
+    \            pos >>= 1;\n            self.node[pos] = M::op(&self.node[pos <<\
+    \ 1], &self.node[pos << 1 | 1]);\n        }\n    }\n\n    pub fn get(&self, pos:\
+    \ usize) -> M::ValueType {\n        assert!(pos < self.n);\n        self.node[pos\
     \ + self.size].clone()\n    }\n\n    pub fn apply(&mut self, pos: usize, value:\
     \ M::ValueType) {\n        self.set(pos, M::op(&self.get(pos), &value));\n   \
     \ }\n\n    pub fn prod(&self, l: usize, r: usize) -> M::ValueType {\n        assert!(l\
@@ -71,7 +79,7 @@ data:
   isVerificationFile: false
   path: crates/ds/segment_tree/segment_tree/src/lib.rs
   requiredBy: []
-  timestamp: '2025-08-30 22:12:56+09:00'
+  timestamp: '2025-08-31 02:14:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/data_structure/point_add_range_sum/src/main.rs

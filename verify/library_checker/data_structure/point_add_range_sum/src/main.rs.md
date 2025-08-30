@@ -28,22 +28,21 @@ data:
     \ &Self::ValueType, right_value: &Self::ValueType) -> Self::ValueType {\n    \
     \    left_value + right_value\n    }\n\n    fn unit() -> Self::ValueType {\n \
     \       0\n    }\n}\n\n#[fastout]\nfn main() {\n    input! {\n        n: usize,\n\
-    \        q: usize,\n        a: [i64; n]\n    }\n    let mut seg = SegmentTree::<M>::new(n);\n\
-    \    for i in 0..n {\n        seg.set(i, a[i]);\n    }\n    for _ in 0..q {\n\
-    \        input! {\n            t: usize\n        }\n        match t {\n      \
-    \      0 => {\n                input! {\n                    p: usize,\n     \
-    \               x: i64\n                }\n                seg.apply(p, x);\n\
-    \            }\n            1 => {\n                input! {\n               \
-    \     l: usize,\n                    r: usize\n                }\n           \
-    \     println!(\"{}\", seg.prod(l, r));\n            }\n            _ => unreachable!(),\n\
-    \        }\n    }\n}\n"
+    \        q: usize,\n        a: [i64; n]\n    }\n    let mut seg = a.into_iter().collect::<SegmentTree<M>>();\n\
+    \    for _ in 0..q {\n        input! {\n            t: usize\n        }\n    \
+    \    match t {\n            0 => {\n                input! {\n               \
+    \     p: usize,\n                    x: i64\n                }\n             \
+    \   seg.apply(p, x);\n            }\n            1 => {\n                input!\
+    \ {\n                    l: usize,\n                    r: usize\n           \
+    \     }\n                println!(\"{}\", seg.prod(l, r));\n            }\n  \
+    \          _ => unreachable!(),\n        }\n    }\n}\n"
   dependsOn:
   - crates/ds/segment_tree/segment_tree/src/lib.rs
   - crates/traits/monoid/src/lib.rs
   isVerificationFile: true
   path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-30 22:12:56+09:00'
+  timestamp: '2025-08-31 02:14:19+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
