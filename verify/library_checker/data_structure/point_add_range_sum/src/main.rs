@@ -43,7 +43,7 @@ fn main() {
                     l: usize,
                     r: usize
                 }
-                println!("{}", seg.prod(l, r));
+                println!("{}", seg.prod(l..r));
             }
             _ => unreachable!(),
         }

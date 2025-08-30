@@ -1,3 +1,5 @@
+use std::ops::{Bound, RangeBounds};
+
 use monoid::Monoid;
 
 pub struct SegmentTree<M>
@@ -58,12 +60,28 @@ where
         self.set(pos, M::op(&self.get(pos), &value));
     }
 
-    pub fn prod(&self, l: usize, r: usize) -> M::ValueType {
+    pub fn prod<R>(&self, range: R) -> M::ValueType
+    where
+        R: RangeBounds<usize>,
+    {
+        if range.start_bound() == Bound::Unbounded && range.end_bound() == Bound::Unbounded {
+            return self.all_prod();
+        }
+        let mut l = match range.start_bound() {
+            Bound::Included(l) => *l,
+            Bound::Excluded(l) => l + 1,
+            Bound::Unbounded => 0,
+        };
+        let mut r = match range.end_bound() {
+            Bound::Included(r) => r + 1,
+            Bound::Excluded(r) => *r,
+            Bound::Unbounded => self.n,
+        };
         assert!(l <= r && r <= self.n);
         let mut value_left = M::unit();
         let mut value_right = M::unit();
-        let mut l = l + self.size;
-        let mut r = r + self.size;
+        l += self.size;
+        r += self.size;
         while l < r {
             if (l & 1) == 1 {
                 value_left = M::op(&value_left, &self.node[l]);
