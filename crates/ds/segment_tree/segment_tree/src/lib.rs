@@ -46,12 +46,12 @@ where
         let mut r = r + self.size;
         while l < r {
             if (l & 1) == 1 {
-                l += 1;
                 value_left = M::op(&value_left, &self.node[l]);
+                l += 1;
             }
             if (r & 1) == 1 {
-                value_right = M::op(&self.node[r], &value_right);
                 r -= 1;
+                value_right = M::op(&self.node[r], &value_right);
             }
             l >>= 1;
             r >>= 1;
