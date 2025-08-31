@@ -22,12 +22,12 @@ fn main() {
         q: usize
     }
     let mut f = Vec::<Affine<Mint>>::new();
-    for i in 0..n {
+    for _ in 0..n {
         input! {
             a: u32,
             b: u32
         }
-        f[i] = Affine(Mint::raw(a), Mint::raw(b));
+        f.push(Affine(Mint::raw(a), Mint::raw(b)));
     }
     let mut seg = f.into_iter().collect::<SegTree>();
     for _ in 0..q {
