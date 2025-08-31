@@ -7,6 +7,13 @@ name = "dsu"
 version = "0.1.0"
 
 [[package]]
+name = "fenwick_tree"
+version = "0.1.0"
+dependencies = [
+ "numeric",
+]
+
+[[package]]
 name = "modint"
 version = "0.1.0"
 dependencies = [
@@ -29,15 +36,6 @@ dependencies = [
 [[package]]
 name = "numeric"
 version = "0.1.0"
-
-[[package]]
-name = "point_add_range_sum"
-version = "0.1.0"
-dependencies = [
- "monoid_util",
- "proconio",
- "segment_tree",
-]
 
 [[package]]
 name = "point_set_range_composite"
@@ -117,4 +115,21 @@ version = "0.1.0"
 dependencies = [
  "dsu",
  "proconio",
+]
+
+[[package]]
+name = "verify_fenwick_tree"
+version = "0.1.0"
+dependencies = [
+ "fenwick_tree",
+ "proconio",
+]
+
+[[package]]
+name = "verify_segment_tree"
+version = "0.1.0"
+dependencies = [
+ "monoid_util",
+ "proconio",
+ "segment_tree",
 ]

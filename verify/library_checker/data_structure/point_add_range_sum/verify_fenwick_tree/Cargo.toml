@@ -1,0 +1,8 @@
+[package]
+name = "verify_fenwick_tree"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+fenwick_tree = { version = "0.1.0", path = "../../../../../crates/ds/fenwick_tree" }
+proconio = { version = "0.5.0", features = ["derive"] }
