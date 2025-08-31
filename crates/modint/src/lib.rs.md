@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/modulus.rs
     title: crates/modint/src/modulus.rs
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/static_modint.rs
     title: crates/modint/src/static_modint.rs
   - icon: ':warning:'
@@ -23,19 +23,19 @@ data:
     path: crates/traits/numeric/src/zero.rs
     title: crates/traits/numeric/src/zero.rs
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/modulus.rs
     title: crates/modint/src/modulus.rs
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/static_modint.rs
     title: crates/modint/src/static_modint.rs
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
     title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -63,7 +63,7 @@ data:
   - crates/modint/src/static_modint.rs
   - crates/modint/src/modulus.rs
   timestamp: '2025-08-31 17:55:35+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
 documentation_of: crates/modint/src/lib.rs

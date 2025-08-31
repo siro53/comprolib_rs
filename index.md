@@ -8,18 +8,18 @@ data:
       title: crates/ds/dsu/src/lib.rs
   - name: crates/ds/segment_tree/segment_tree/src
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/ds/segment_tree/segment_tree/src/lib.rs
       title: crates/ds/segment_tree/segment_tree/src/lib.rs
   - name: crates/modint/src
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: crates/modint/src/lib.rs
       title: crates/modint/src/lib.rs
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: crates/modint/src/modulus.rs
       title: crates/modint/src/modulus.rs
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: crates/modint/src/static_modint.rs
       title: crates/modint/src/static_modint.rs
   - name: crates/traits/monoid/src
@@ -46,37 +46,37 @@ data:
       title: crates/traits/numeric/src/zero.rs
   - name: crates/util/monoid_util/src
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/add.rs
       title: crates/util/monoid_util/src/add.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/affine.rs
       title: crates/util/monoid_util/src/affine.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/bitwise_and.rs
       title: crates/util/monoid_util/src/bitwise_and.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/bitwise_or.rs
       title: crates/util/monoid_util/src/bitwise_or.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/bitwise_xor.rs
       title: crates/util/monoid_util/src/bitwise_xor.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/lib.rs
       title: crates/util/monoid_util/src/lib.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/max.rs
       title: crates/util/monoid_util/src/max.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/max_with_index.rs
       title: crates/util/monoid_util/src/max_with_index.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/min.rs
       title: crates/util/monoid_util/src/min.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/min_with_index.rs
       title: crates/util/monoid_util/src/min_with_index.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/mul.rs
       title: crates/util/monoid_util/src/mul.rs
   verificationCategories:
@@ -87,7 +87,7 @@ data:
       title: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
   - name: verify/library_checker/data_structure/point_set_range_composite/src
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
       title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - name: verify/library_checker/data_structure/unionfind/src

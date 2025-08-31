@@ -1,56 +1,56 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/lib.rs
     title: crates/modint/src/lib.rs
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/modulus.rs
     title: crates/modint/src/modulus.rs
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/static_modint.rs
     title: crates/modint/src/static_modint.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/add.rs
     title: crates/util/monoid_util/src/add.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/affine.rs
     title: crates/util/monoid_util/src/affine.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_and.rs
     title: crates/util/monoid_util/src/bitwise_and.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_or.rs
     title: crates/util/monoid_util/src/bitwise_or.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_xor.rs
     title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/max.rs
     title: crates/util/monoid_util/src/max.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/max_with_index.rs
     title: crates/util/monoid_util/src/max_with_index.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min.rs
     title: crates/util/monoid_util/src/min.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min_with_index.rs
     title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/point_set_range_composite
     links:
@@ -66,19 +66,20 @@ data:
     \ AffineOperator};\nuse proconio::{fastout, input};\nuse segment_tree::SegmentTree;\n\
     \n#[derive(Clone, Copy, PartialEq, Eq)]\npub enum Mod998244353 {}\n\nimpl Modulus\
     \ for Mod998244353 {\n    const MOD: u32 = 998_244_353;\n}\n\ntype Mint = StaticModInt<Mod998244353>;\n\
-    type SegTree = SegmentTree<AffineOperator<Mint>>;\n\n#[fastout]\nfn main() {\n\
-    \    input! {\n        n: usize,\n        q: usize\n    }\n    let mut f = Vec::<Affine<Mint>>::new();\n\
-    \    for _ in 0..n {\n        input! {\n            a: u32,\n            b: u32\n\
-    \        }\n        f.push(Affine(Mint::raw(a), Mint::raw(b)));\n    }\n    let\
-    \ mut seg = f.into_iter().collect::<SegTree>();\n    for _ in 0..q {\n       \
-    \ input! {\n            t: usize\n        }\n        match t {\n            0\
-    \ => {\n                input! {\n                    p: usize,\n            \
-    \        c: u32,\n                    d: u32\n                }\n            \
-    \    seg.set(p, Affine(Mint::raw(c), Mint::raw(d)));\n            }\n        \
-    \    1 => {\n                input! {\n                    l: usize,\n       \
-    \             r: usize,\n                    x: u32\n                }\n     \
-    \           let folded_f = seg.prod(l..r);\n                println!(\"{}\", folded_f.eval(Mint::raw(x)));\n\
-    \            }\n            _ => unreachable!(),\n        }\n    }\n}\n"
+    type SegTree = SegmentTree<AffineOperator<Mint, true>>;\n\n#[fastout]\nfn main()\
+    \ {\n    input! {\n        n: usize,\n        q: usize\n    }\n    let mut f =\
+    \ Vec::<Affine<Mint>>::new();\n    for _ in 0..n {\n        input! {\n       \
+    \     a: u32,\n            b: u32\n        }\n        f.push(Affine(Mint::raw(a),\
+    \ Mint::raw(b)));\n    }\n    let mut seg = f.into_iter().collect::<SegTree>();\n\
+    \    for _ in 0..q {\n        input! {\n            t: usize\n        }\n    \
+    \    match t {\n            0 => {\n                input! {\n               \
+    \     p: usize,\n                    c: u32,\n                    d: u32\n   \
+    \             }\n                seg.set(p, Affine(Mint::raw(c), Mint::raw(d)));\n\
+    \            }\n            1 => {\n                input! {\n               \
+    \     l: usize,\n                    r: usize,\n                    x: u32\n \
+    \               }\n                let folded_f = seg.prod(l..r);\n          \
+    \      println!(\"{}\", folded_f.eval(Mint::raw(x)));\n            }\n       \
+    \     _ => unreachable!(),\n        }\n    }\n}\n"
   dependsOn:
   - crates/ds/segment_tree/segment_tree/src/lib.rs
   - crates/modint/src/lib.rs
@@ -98,8 +99,8 @@ data:
   isVerificationFile: true
   path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-31 18:03:27+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2025-08-31 18:12:56+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
 layout: document
