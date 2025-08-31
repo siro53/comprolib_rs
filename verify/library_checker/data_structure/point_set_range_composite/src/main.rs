@@ -1,3 +1,5 @@
+// verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite
+
 use modint::{modulus::Modulus, static_modint::StaticModInt};
 use monoid_util::affine::{Affine, AffineOperator};
 use proconio::{fastout, input};
