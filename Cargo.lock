@@ -7,6 +7,14 @@ name = "dsu"
 version = "0.1.0"
 
 [[package]]
+name = "modint"
+version = "0.1.0"
+dependencies = [
+ "numeric",
+ "proconio",
+]
+
+[[package]]
 name = "monoid"
 version = "0.1.0"
 
@@ -26,6 +34,16 @@ version = "0.1.0"
 name = "point_add_range_sum"
 version = "0.1.0"
 dependencies = [
+ "monoid_util",
+ "proconio",
+ "segment_tree",
+]
+
+[[package]]
+name = "point_set_range_composite"
+version = "0.1.0"
+dependencies = [
+ "modint",
  "monoid_util",
  "proconio",
  "segment_tree",

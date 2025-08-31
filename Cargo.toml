@@ -7,4 +7,4 @@ members = [
     "crates/util/monoid_util",
     "verify/library_checker/data_structure/unionfind",
     "verify/library_checker/data_structure/point_add_range_sum"
-]
+, "crates/modint", "verify/library_checker/data_structure/point_set_range_composite"]
