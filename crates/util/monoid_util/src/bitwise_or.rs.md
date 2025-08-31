@@ -1,77 +1,77 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/add.rs
     title: crates/util/monoid_util/src/add.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/affine.rs
     title: crates/util/monoid_util/src/affine.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/bitwise_and.rs
     title: crates/util/monoid_util/src/bitwise_and.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/bitwise_xor.rs
     title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/max.rs
     title: crates/util/monoid_util/src/max.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/max_with_index.rs
     title: crates/util/monoid_util/src/max_with_index.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/min.rs
     title: crates/util/monoid_util/src/min.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/min_with_index.rs
     title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/add.rs
     title: crates/util/monoid_util/src/add.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/affine.rs
     title: crates/util/monoid_util/src/affine.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/bitwise_and.rs
     title: crates/util/monoid_util/src/bitwise_and.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/bitwise_xor.rs
     title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/max.rs
     title: crates/util/monoid_util/src/max.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/max_with_index.rs
     title: crates/util/monoid_util/src/max_with_index.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/min.rs
     title: crates/util/monoid_util/src/min.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/min_with_index.rs
     title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
-  - icon: ':warning:'
-    path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
-    title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
     title: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+    title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  _isVerificationFailed: true
   _pathExtension: rs
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -100,7 +100,6 @@ data:
   isVerificationFile: false
   path: crates/util/monoid_util/src/bitwise_or.rs
   requiredBy:
-  - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - crates/util/monoid_util/src/min.rs
   - crates/util/monoid_util/src/max.rs
   - crates/util/monoid_util/src/min_with_index.rs
@@ -112,8 +111,9 @@ data:
   - crates/util/monoid_util/src/lib.rs
   - crates/util/monoid_util/src/bitwise_and.rs
   timestamp: '2025-08-31 11:54:18+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - verify/library_checker/data_structure/point_add_range_sum/src/main.rs
 documentation_of: crates/util/monoid_util/src/bitwise_or.rs
 layout: document

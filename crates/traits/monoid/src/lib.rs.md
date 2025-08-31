@@ -2,10 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
   _extendedVerifiedWith: []

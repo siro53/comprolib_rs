@@ -1,65 +1,68 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
-  - icon: ':warning:'
+  - icon: ':x:'
     path: crates/modint/src/lib.rs
     title: crates/modint/src/lib.rs
-  - icon: ':warning:'
+  - icon: ':x:'
     path: crates/modint/src/modulus.rs
     title: crates/modint/src/modulus.rs
-  - icon: ':warning:'
+  - icon: ':x:'
     path: crates/modint/src/static_modint.rs
     title: crates/modint/src/static_modint.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/add.rs
     title: crates/util/monoid_util/src/add.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/affine.rs
     title: crates/util/monoid_util/src/affine.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/bitwise_and.rs
     title: crates/util/monoid_util/src/bitwise_and.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/bitwise_or.rs
     title: crates/util/monoid_util/src/bitwise_or.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/bitwise_xor.rs
     title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/max.rs
     title: crates/util/monoid_util/src/max.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/max_with_index.rs
     title: crates/util/monoid_util/src/max_with_index.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/min.rs
     title: crates/util/monoid_util/src/min.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/min_with_index.rs
     title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: rs
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
-    links: []
+    PROBLEM: https://judge.yosupo.jp/problem/point_set_range_composite
+    links:
+    - https://judge.yosupo.jp/problem/point_set_range_composite
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "use modint::{modulus::Modulus, static_modint::StaticModInt};\nuse monoid_util::affine::{Affine,\
+  code: "// verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite\n\
+    \nuse modint::{modulus::Modulus, static_modint::StaticModInt};\nuse monoid_util::affine::{Affine,\
     \ AffineOperator};\nuse proconio::{fastout, input};\nuse segment_tree::SegmentTree;\n\
     \n#[derive(Clone, Copy, PartialEq, Eq)]\npub enum Mod998244353 {}\n\nimpl Modulus\
     \ for Mod998244353 {\n    const MOD: u32 = 998_244_353;\n}\n\ntype Mint = StaticModInt<Mod998244353>;\n\
@@ -92,16 +95,16 @@ data:
   - crates/util/monoid_util/src/min.rs
   - crates/util/monoid_util/src/min_with_index.rs
   - crates/util/monoid_util/src/mul.rs
-  isVerificationFile: false
+  isVerificationFile: true
   path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-31 17:55:35+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2025-08-31 17:57:39+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
 layout: document
 redirect_from:
-- /library/verify/library_checker/data_structure/point_set_range_composite/src/main.rs
-- /library/verify/library_checker/data_structure/point_set_range_composite/src/main.rs.html
+- /verify/verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+- /verify/verify/library_checker/data_structure/point_set_range_composite/src/main.rs.html
 title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
 ---

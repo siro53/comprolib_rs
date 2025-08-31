@@ -4,17 +4,17 @@ data:
   - icon: ':warning:'
     path: crates/traits/monoid/src/lib.rs
     title: crates/traits/monoid/src/lib.rs
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
-    title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
     title: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+    title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  _isVerificationFailed: true
   _pathExtension: rs
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -87,11 +87,11 @@ data:
   - crates/traits/monoid/src/lib.rs
   isVerificationFile: false
   path: crates/ds/segment_tree/segment_tree/src/lib.rs
-  requiredBy:
-  - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  requiredBy: []
   timestamp: '2025-08-31 02:27:27+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - verify/library_checker/data_structure/point_add_range_sum/src/main.rs
 documentation_of: crates/ds/segment_tree/segment_tree/src/lib.rs
 layout: document
