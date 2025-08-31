@@ -13,7 +13,7 @@ impl Modulus for Mod998244353 {
 }
 
 type Mint = StaticModInt<Mod998244353>;
-type SegTree = SegmentTree<AffineOperator<Mint>>;
+type SegTree = SegmentTree<AffineOperator<Mint, true>>;
 
 #[fastout]
 fn main() {
