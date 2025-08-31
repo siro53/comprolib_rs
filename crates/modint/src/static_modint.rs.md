@@ -89,7 +89,7 @@ data:
   requiredBy:
   - crates/modint/src/modulus.rs
   - crates/modint/src/lib.rs
-  timestamp: '2025-08-31 17:55:35+09:00'
+  timestamp: '2025-08-31 18:19:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs

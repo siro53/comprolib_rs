@@ -62,14 +62,12 @@ data:
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "// verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite\n\
-    \nuse modint::{modulus::Modulus, static_modint::StaticModInt};\nuse monoid_util::affine::{Affine,\
-    \ AffineOperator};\nuse proconio::{fastout, input};\nuse segment_tree::SegmentTree;\n\
-    \n#[derive(Clone, Copy, PartialEq, Eq)]\npub enum Mod998244353 {}\n\nimpl Modulus\
-    \ for Mod998244353 {\n    const MOD: u32 = 998_244_353;\n}\n\ntype Mint = StaticModInt<Mod998244353>;\n\
-    type SegTree = SegmentTree<AffineOperator<Mint, true>>;\n\n#[fastout]\nfn main()\
-    \ {\n    input! {\n        n: usize,\n        q: usize\n    }\n    let mut f =\
-    \ Vec::<Affine<Mint>>::new();\n    for _ in 0..n {\n        input! {\n       \
-    \     a: u32,\n            b: u32\n        }\n        f.push(Affine(Mint::raw(a),\
+    \nuse modint::ModInt998244353;\nuse monoid_util::affine::{Affine, AffineOperator};\n\
+    use proconio::{fastout, input};\nuse segment_tree::SegmentTree;\n\ntype Mint =\
+    \ ModInt998244353;\ntype SegTree = SegmentTree<AffineOperator<Mint, true>>;\n\n\
+    #[fastout]\nfn main() {\n    input! {\n        n: usize,\n        q: usize\n \
+    \   }\n    let mut f = Vec::<Affine<Mint>>::new();\n    for _ in 0..n {\n    \
+    \    input! {\n            a: u32,\n            b: u32\n        }\n        f.push(Affine(Mint::raw(a),\
     \ Mint::raw(b)));\n    }\n    let mut seg = f.into_iter().collect::<SegTree>();\n\
     \    for _ in 0..q {\n        input! {\n            t: usize\n        }\n    \
     \    match t {\n            0 => {\n                input! {\n               \
@@ -99,7 +97,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-31 18:12:56+09:00'
+  timestamp: '2025-08-31 18:19:07+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/point_set_range_composite/src/main.rs

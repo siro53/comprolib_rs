@@ -44,11 +44,12 @@ data:
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: 'pub mod modulus;
-
-    pub mod static_modint;
-
-    '
+  code: "use crate::{modulus::Modulus, static_modint::StaticModInt};\n\npub mod modulus;\n\
+    pub mod static_modint;\n\n#[derive(Clone, Copy, PartialEq, Eq)]\npub enum Mod998244353\
+    \ {}\n\nimpl Modulus for Mod998244353 {\n    const MOD: u32 = 998_244_353;\n}\n\
+    \n#[derive(Clone, Copy, PartialEq, Eq)]\npub enum Mod1000000007 {}\n\nimpl Modulus\
+    \ for Mod1000000007 {\n    const MOD: u32 = 1_000_000_007;\n}\n\npub type ModInt998244353\
+    \ = StaticModInt<Mod998244353>;\npub type ModInt1000000007 = StaticModInt<Mod1000000007>;\n"
   dependsOn:
   - crates/modint/src/modulus.rs
   - crates/modint/src/static_modint.rs
@@ -62,7 +63,7 @@ data:
   requiredBy:
   - crates/modint/src/static_modint.rs
   - crates/modint/src/modulus.rs
-  timestamp: '2025-08-31 17:55:35+09:00'
+  timestamp: '2025-08-31 18:19:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
