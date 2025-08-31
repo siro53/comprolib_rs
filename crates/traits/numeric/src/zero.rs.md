@@ -18,6 +18,9 @@ data:
     path: crates/ds/fenwick_tree/src/lib.rs
     title: crates/ds/fenwick_tree/src/lib.rs
   - icon: ':heavy_check_mark:'
+    path: crates/misc/cumulative_sum_2d/src/lib.rs
+    title: crates/misc/cumulative_sum_2d/src/lib.rs
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/lib.rs
     title: crates/modint/src/lib.rs
   - icon: ':warning:'
@@ -65,6 +68,7 @@ data:
   path: crates/traits/numeric/src/zero.rs
   requiredBy:
   - crates/ds/fenwick_tree/src/lib.rs
+  - crates/misc/cumulative_sum_2d/src/lib.rs
   - crates/traits/numeric/src/bound.rs
   - crates/traits/numeric/src/lib.rs
   - crates/traits/numeric/src/infinity.rs

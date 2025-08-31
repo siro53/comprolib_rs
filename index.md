@@ -22,6 +22,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/ds/segment_tree/segment_tree/src/lib.rs
       title: crates/ds/segment_tree/segment_tree/src/lib.rs
+  - name: crates/misc/compress/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: crates/misc/compress/src/lib.rs
+      title: crates/misc/compress/src/lib.rs
+  - name: crates/misc/cumulative_sum_2d/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: crates/misc/cumulative_sum_2d/src/lib.rs
+      title: crates/misc/cumulative_sum_2d/src/lib.rs
   - name: crates/modint/src
     pages:
     - icon: ':heavy_check_mark:'
@@ -91,6 +101,11 @@ data:
       path: crates/util/monoid_util/src/mul.rs
       title: crates/util/monoid_util/src/mul.rs
   verificationCategories:
+  - name: verify/aoj/aoj2426/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/aoj/aoj2426/src/main.rs
+      title: verify/aoj/aoj2426/src/main.rs
   - name: verify/library_checker/data_structure/point_add_range_sum/verify_fenwick_tree/src
     pages:
     - icon: ':heavy_check_mark:'
