@@ -1,22 +1,10 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_add_range_sum
 
-use monoid::Monoid;
+use monoid_util::add::Additive;
 use proconio::{fastout, input};
 use segment_tree::SegmentTree;
 
-struct M;
-
-impl Monoid for M {
-    type ValueType = i64;
-
-    fn op(left_value: &Self::ValueType, right_value: &Self::ValueType) -> Self::ValueType {
-        left_value + right_value
-    }
-
-    fn unit() -> Self::ValueType {
-        0
-    }
-}
+type SegTree = SegmentTree<Additive<i64>>;
 
 #[fastout]
 fn main() {
@@ -25,7 +13,7 @@ fn main() {
         q: usize,
         a: [i64; n]
     }
-    let mut seg = a.into_iter().collect::<SegmentTree<M>>();
+    let mut seg = a.into_iter().collect::<SegTree>();
     for _ in 0..q {
         input! {
             t: usize

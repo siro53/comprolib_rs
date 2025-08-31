@@ -1,0 +1,8 @@
+[package]
+name = "monoid_util"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+monoid = { version = "0.1.0", path = "../../traits/monoid" }
+numeric = { version = "0.1.0", path = "../../traits/numeric" }

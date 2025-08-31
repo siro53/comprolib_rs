@@ -4,6 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-monoid = { version = "0.1.0", path = "../../../../crates/traits/monoid" }
+monoid_util = { version = "0.1.0", path = "../../../../crates/util/monoid_util" }
 proconio = { version = "0.5.0", features = ["derive"] }
 segment_tree = { version = "0.1.0", path = "../../../../crates/ds/segment_tree/segment_tree" }

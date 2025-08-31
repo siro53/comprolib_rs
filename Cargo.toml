@@ -1,7 +1,10 @@
 [workspace]
 members = [
-    "./crates/ds/dsu",
-    "./crates/ds/segment_tree/*",
-    "./crates/traits/*",
-    "./verify/library_checker/data_structure/*"
-, "crates/ds/segment_tree/segment_tree", "crates/traits/monoid", "verify/library_checker/data_structure/point_add_range_sum"]
+    "crates/ds/dsu",
+    "crates/ds/segment_tree/segment_tree",
+    "crates/traits/monoid",
+    "crates/traits/numeric",
+    "crates/util/monoid_util",
+    "verify/library_checker/data_structure/unionfind",
+    "verify/library_checker/data_structure/point_add_range_sum"
+]
