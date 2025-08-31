@@ -1,18 +1,11 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite
 
-use modint::{modulus::Modulus, static_modint::StaticModInt};
+use modint::ModInt998244353;
 use monoid_util::affine::{Affine, AffineOperator};
 use proconio::{fastout, input};
 use segment_tree::SegmentTree;
 
-#[derive(Clone, Copy, PartialEq, Eq)]
-pub enum Mod998244353 {}
-
-impl Modulus for Mod998244353 {
-    const MOD: u32 = 998_244_353;
-}
-
-type Mint = StaticModInt<Mod998244353>;
+type Mint = ModInt998244353;
 type SegTree = SegmentTree<AffineOperator<Mint, true>>;
 
 #[fastout]
