@@ -68,8 +68,8 @@ data:
     \ for Mod998244353 {\n    const MOD: u32 = 998_244_353;\n}\n\ntype Mint = StaticModInt<Mod998244353>;\n\
     type SegTree = SegmentTree<AffineOperator<Mint>>;\n\n#[fastout]\nfn main() {\n\
     \    input! {\n        n: usize,\n        q: usize\n    }\n    let mut f = Vec::<Affine<Mint>>::new();\n\
-    \    for i in 0..n {\n        input! {\n            a: u32,\n            b: u32\n\
-    \        }\n        f[i] = Affine(Mint::raw(a), Mint::raw(b));\n    }\n    let\
+    \    for _ in 0..n {\n        input! {\n            a: u32,\n            b: u32\n\
+    \        }\n        f.push(Affine(Mint::raw(a), Mint::raw(b)));\n    }\n    let\
     \ mut seg = f.into_iter().collect::<SegTree>();\n    for _ in 0..q {\n       \
     \ input! {\n            t: usize\n        }\n        match t {\n            0\
     \ => {\n                input! {\n                    p: usize,\n            \
@@ -98,7 +98,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-31 17:57:39+09:00'
+  timestamp: '2025-08-31 18:03:27+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
