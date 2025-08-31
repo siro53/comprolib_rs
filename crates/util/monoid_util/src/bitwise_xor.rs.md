@@ -62,6 +62,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
+  - icon: ':warning:'
+    path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+    title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
@@ -97,6 +100,7 @@ data:
   isVerificationFile: false
   path: crates/util/monoid_util/src/bitwise_xor.rs
   requiredBy:
+  - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - crates/util/monoid_util/src/min.rs
   - crates/util/monoid_util/src/max.rs
   - crates/util/monoid_util/src/min_with_index.rs

@@ -4,7 +4,10 @@ data:
   - icon: ':warning:'
     path: crates/traits/monoid/src/lib.rs
     title: crates/traits/monoid/src/lib.rs
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+    title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
@@ -84,7 +87,8 @@ data:
   - crates/traits/monoid/src/lib.rs
   isVerificationFile: false
   path: crates/ds/segment_tree/segment_tree/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   timestamp: '2025-08-31 02:27:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

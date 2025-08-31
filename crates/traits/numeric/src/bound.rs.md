@@ -15,6 +15,9 @@ data:
     title: crates/traits/numeric/src/zero.rs
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: crates/modint/src/lib.rs
+    title: crates/modint/src/lib.rs
+  - icon: ':warning:'
     path: crates/traits/numeric/src/infinity.rs
     title: crates/traits/numeric/src/infinity.rs
   - icon: ':warning:'
@@ -62,6 +65,7 @@ data:
   - crates/traits/numeric/src/lib.rs
   - crates/traits/numeric/src/infinity.rs
   - crates/traits/numeric/src/one.rs
+  - crates/modint/src/lib.rs
   - crates/util/monoid_util/src/lib.rs
   timestamp: '2025-08-31 11:54:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS

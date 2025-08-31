@@ -2,11 +2,20 @@
 data:
   _extendedDependsOn:
   - icon: ':warning:'
+    path: crates/modint/src/modulus.rs
+    title: crates/modint/src/modulus.rs
+  - icon: ':warning:'
+    path: crates/modint/src/static_modint.rs
+    title: crates/modint/src/static_modint.rs
+  - icon: ':warning:'
     path: crates/traits/numeric/src/bound.rs
     title: crates/traits/numeric/src/bound.rs
   - icon: ':warning:'
     path: crates/traits/numeric/src/infinity.rs
     title: crates/traits/numeric/src/infinity.rs
+  - icon: ':warning:'
+    path: crates/traits/numeric/src/lib.rs
+    title: crates/traits/numeric/src/lib.rs
   - icon: ':warning:'
     path: crates/traits/numeric/src/one.rs
     title: crates/traits/numeric/src/one.rs
@@ -15,23 +24,14 @@ data:
     title: crates/traits/numeric/src/zero.rs
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: crates/modint/src/lib.rs
-    title: crates/modint/src/lib.rs
+    path: crates/modint/src/modulus.rs
+    title: crates/modint/src/modulus.rs
   - icon: ':warning:'
-    path: crates/traits/numeric/src/bound.rs
-    title: crates/traits/numeric/src/bound.rs
+    path: crates/modint/src/static_modint.rs
+    title: crates/modint/src/static_modint.rs
   - icon: ':warning:'
-    path: crates/traits/numeric/src/infinity.rs
-    title: crates/traits/numeric/src/infinity.rs
-  - icon: ':warning:'
-    path: crates/traits/numeric/src/one.rs
-    title: crates/traits/numeric/src/one.rs
-  - icon: ':warning:'
-    path: crates/traits/numeric/src/zero.rs
-    title: crates/traits/numeric/src/zero.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/lib.rs
-    title: crates/util/monoid_util/src/lib.rs
+    path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+    title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: rs
@@ -44,36 +44,32 @@ data:
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: 'pub mod bound;
+  code: 'pub mod modulus;
 
-    pub mod infinity;
-
-    pub mod one;
-
-    pub mod zero;
+    pub mod static_modint;
 
     '
   dependsOn:
+  - crates/modint/src/modulus.rs
+  - crates/modint/src/static_modint.rs
   - crates/traits/numeric/src/bound.rs
   - crates/traits/numeric/src/infinity.rs
+  - crates/traits/numeric/src/lib.rs
   - crates/traits/numeric/src/one.rs
   - crates/traits/numeric/src/zero.rs
   isVerificationFile: false
-  path: crates/traits/numeric/src/lib.rs
+  path: crates/modint/src/lib.rs
   requiredBy:
-  - crates/traits/numeric/src/bound.rs
-  - crates/traits/numeric/src/zero.rs
-  - crates/traits/numeric/src/infinity.rs
-  - crates/traits/numeric/src/one.rs
-  - crates/modint/src/lib.rs
-  - crates/util/monoid_util/src/lib.rs
-  timestamp: '2025-08-31 11:54:18+09:00'
+  - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  - crates/modint/src/static_modint.rs
+  - crates/modint/src/modulus.rs
+  timestamp: '2025-08-31 17:55:35+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: crates/traits/numeric/src/lib.rs
+documentation_of: crates/modint/src/lib.rs
 layout: document
 redirect_from:
-- /library/crates/traits/numeric/src/lib.rs
-- /library/crates/traits/numeric/src/lib.rs.html
-title: crates/traits/numeric/src/lib.rs
+- /library/crates/modint/src/lib.rs
+- /library/crates/modint/src/lib.rs.html
+title: crates/modint/src/lib.rs
 ---

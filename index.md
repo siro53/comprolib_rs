@@ -11,6 +11,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/ds/segment_tree/segment_tree/src/lib.rs
       title: crates/ds/segment_tree/segment_tree/src/lib.rs
+  - name: crates/modint/src
+    pages:
+    - icon: ':warning:'
+      path: crates/modint/src/lib.rs
+      title: crates/modint/src/lib.rs
+    - icon: ':warning:'
+      path: crates/modint/src/modulus.rs
+      title: crates/modint/src/modulus.rs
+    - icon: ':warning:'
+      path: crates/modint/src/static_modint.rs
+      title: crates/modint/src/static_modint.rs
   - name: crates/traits/monoid/src
     pages:
     - icon: ':warning:'
@@ -68,6 +79,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/mul.rs
       title: crates/util/monoid_util/src/mul.rs
+  - name: verify/library_checker/data_structure/point_set_range_composite/src
+    pages:
+    - icon: ':warning:'
+      path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+      title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   verificationCategories:
   - name: verify/library_checker/data_structure/point_add_range_sum/src
     pages:
