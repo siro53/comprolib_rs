@@ -5,13 +5,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
-  _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
-    title: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
+    path: crates/util/monoid_util/src/lib.rs
+    title: crates/util/monoid_util/src/lib.rs
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -28,10 +28,10 @@ data:
   path: crates/traits/monoid/src/lib.rs
   requiredBy:
   - crates/ds/segment_tree/segment_tree/src/lib.rs
+  - crates/util/monoid_util/src/lib.rs
   timestamp: '2025-08-30 21:29:59+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - verify/library_checker/data_structure/point_add_range_sum/src/main.rs
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: crates/traits/monoid/src/lib.rs
 layout: document
 redirect_from:
