@@ -78,15 +78,15 @@ data:
   - crates/util/monoid_util/src/min_with_index.rs
   - crates/util/monoid_util/src/mul.rs
   isVerificationFile: true
-  path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
+  path: verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-31 18:12:56+09:00'
+  timestamp: '2025-08-31 22:36:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
+documentation_of: verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
 layout: document
 redirect_from:
-- /verify/verify/library_checker/data_structure/point_add_range_sum/src/main.rs
-- /verify/verify/library_checker/data_structure/point_add_range_sum/src/main.rs.html
-title: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
+- /verify/verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
+- /verify/verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs.html
+title: verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
 ---

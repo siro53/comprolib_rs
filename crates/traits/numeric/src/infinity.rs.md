@@ -15,6 +15,9 @@ data:
     title: crates/traits/numeric/src/zero.rs
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: crates/ds/fenwick_tree/src/lib.rs
+    title: crates/ds/fenwick_tree/src/lib.rs
+  - icon: ':heavy_check_mark:'
     path: crates/modint/src/lib.rs
     title: crates/modint/src/lib.rs
   - icon: ':warning:'
@@ -67,6 +70,7 @@ data:
   isVerificationFile: false
   path: crates/traits/numeric/src/infinity.rs
   requiredBy:
+  - crates/ds/fenwick_tree/src/lib.rs
   - crates/traits/numeric/src/bound.rs
   - crates/traits/numeric/src/zero.rs
   - crates/traits/numeric/src/lib.rs

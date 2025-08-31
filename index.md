@@ -6,6 +6,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/ds/dsu/src/lib.rs
       title: crates/ds/dsu/src/lib.rs
+  - name: crates/ds/fenwick_tree/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: crates/ds/fenwick_tree/src/fenwick_tree.rs
+      title: crates/ds/fenwick_tree/src/fenwick_tree.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/ds/fenwick_tree/src/lib.rs
+      title: crates/ds/fenwick_tree/src/lib.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/ds/fenwick_tree/src/range_fenwick_tree.rs
+      title: crates/ds/fenwick_tree/src/range_fenwick_tree.rs
   - name: crates/ds/segment_tree/segment_tree/src
     pages:
     - icon: ':heavy_check_mark:'
@@ -80,11 +91,16 @@ data:
       path: crates/util/monoid_util/src/mul.rs
       title: crates/util/monoid_util/src/mul.rs
   verificationCategories:
-  - name: verify/library_checker/data_structure/point_add_range_sum/src
+  - name: verify/library_checker/data_structure/point_add_range_sum/verify_fenwick_tree/src
     pages:
     - icon: ':heavy_check_mark:'
-      path: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
-      title: verify/library_checker/data_structure/point_add_range_sum/src/main.rs
+      path: verify/library_checker/data_structure/point_add_range_sum/verify_fenwick_tree/src/main.rs
+      title: verify/library_checker/data_structure/point_add_range_sum/verify_fenwick_tree/src/main.rs
+  - name: verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
+      title: verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
   - name: verify/library_checker/data_structure/point_set_range_composite/src
     pages:
     - icon: ':heavy_check_mark:'
