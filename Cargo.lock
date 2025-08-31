@@ -3,6 +3,29 @@
 version = 4
 
 [[package]]
+name = "aoj2426"
+version = "0.1.0"
+dependencies = [
+ "compress",
+ "cumulative_sum_2d",
+ "proconio",
+]
+
+[[package]]
+name = "compress"
+version = "0.1.0"
+dependencies = [
+ "superslice",
+]
+
+[[package]]
+name = "cumulative_sum_2d"
+version = "0.1.0"
+dependencies = [
+ "numeric",
+]
+
+[[package]]
 name = "dsu"
 version = "0.1.0"
 
@@ -91,6 +114,12 @@ version = "0.1.0"
 dependencies = [
  "monoid",
 ]
+
+[[package]]
+name = "superslice"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ab16ced94dbd8a46c82fd81e3ed9a8727dac2977ea869d217bcc4ea1f122e81f"
 
 [[package]]
 name = "syn"

@@ -1,0 +1,9 @@
+[package]
+name = "aoj2426"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+compress = { version = "0.1.0", path = "../../../crates/misc/compress" }
+cumulative_sum_2d = { version = "0.1.0", path = "../../../crates/misc/cumulative_sum_2d" }
+proconio = { version = "0.5.0", features = ["derive"] }
