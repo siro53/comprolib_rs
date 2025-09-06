@@ -32,6 +32,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/misc/cumulative_sum_2d/src/lib.rs
       title: crates/misc/cumulative_sum_2d/src/lib.rs
+  - name: crates/misc/rle/src
+    pages:
+    - icon: ':warning:'
+      path: crates/misc/rle/src/lib.rs
+      title: crates/misc/rle/src/lib.rs
   - name: crates/modint/src
     pages:
     - icon: ':heavy_check_mark:'
@@ -100,6 +105,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/mul.rs
       title: crates/util/monoid_util/src/mul.rs
+  - name: verify/yukicoder/yuki1469/yuki1469_1/src
+    pages:
+    - icon: ':warning:'
+      path: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
+      title: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
   verificationCategories:
   - name: verify/aoj/aoj2426/src
     pages:
