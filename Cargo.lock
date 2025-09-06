@@ -109,6 +109,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "rle"
+version = "0.1.0"
+
+[[package]]
 name = "segment_tree"
 version = "0.1.0"
 dependencies = [
@@ -161,4 +165,12 @@ dependencies = [
  "monoid_util",
  "proconio",
  "segment_tree",
+]
+
+[[package]]
+name = "yuki1469_1"
+version = "0.1.0"
+dependencies = [
+ "proconio",
+ "rle",
 ]
