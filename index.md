@@ -34,7 +34,7 @@ data:
       title: crates/misc/cumulative_sum_2d/src/lib.rs
   - name: crates/misc/rle/src
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: crates/misc/rle/src/lib.rs
       title: crates/misc/rle/src/lib.rs
   - name: crates/modint/src
@@ -133,7 +133,7 @@ data:
       title: verify/library_checker/data_structure/unionfind/src/main.rs
   - name: verify/yukicoder/yuki1469/yuki1469_1/src
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
       title: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
 layout: toppage

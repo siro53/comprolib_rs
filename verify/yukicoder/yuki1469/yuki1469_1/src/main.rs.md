@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: crates/misc/rle/src/lib.rs
     title: crates/misc/rle/src/lib.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://yukicoder.me/problems/no/1469
     links:
@@ -30,7 +30,7 @@ data:
   path: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
   requiredBy: []
   timestamp: '2025-09-06 15:34:11+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
 layout: document
