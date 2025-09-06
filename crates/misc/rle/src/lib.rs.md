@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
     path: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
     title: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: rs
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -26,11 +26,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: crates/misc/rle/src/lib.rs
-  requiredBy:
-  - verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
+  requiredBy: []
   timestamp: '2025-09-06 15:29:25+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
 documentation_of: crates/misc/rle/src/lib.rs
 layout: document
 redirect_from:
