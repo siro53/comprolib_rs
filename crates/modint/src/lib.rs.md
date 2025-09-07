@@ -33,6 +33,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
     title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  - icon: ':heavy_check_mark:'
+    path: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
+    title: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
   _isVerificationFailed: false
   _pathExtension: rs
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -66,6 +69,7 @@ data:
   timestamp: '2025-08-31 18:19:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
 documentation_of: crates/modint/src/lib.rs
 layout: document

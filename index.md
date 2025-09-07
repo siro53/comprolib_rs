@@ -131,6 +131,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
       title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  - name: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
+      title: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
   - name: verify/library_checker/data_structure/unionfind/src
     pages:
     - icon: ':heavy_check_mark:'
