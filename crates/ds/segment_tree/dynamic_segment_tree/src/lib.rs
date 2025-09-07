@@ -96,7 +96,7 @@ where
         } else {
             ptr.children_node[0].as_mut().unwrap().value.clone()
         };
-        let right_value = if ptr.children_node[0].is_none() {
+        let right_value = if ptr.children_node[1].is_none() {
             M::unit()
         } else {
             ptr.children_node[1].as_mut().unwrap().value.clone()
