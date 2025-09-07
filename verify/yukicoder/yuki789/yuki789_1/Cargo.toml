@@ -1,0 +1,9 @@
+[package]
+name = "yuki789_1"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dynamic_segment_tree = { version = "0.1.0", path = "../../../../crates/ds/segment_tree/dynamic_segment_tree" }
+monoid_util = { version = "0.1.0", path = "../../../../crates/util/monoid_util" }
+proconio = { version = "0.5.0", features = ["derive"] }

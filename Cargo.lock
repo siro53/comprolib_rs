@@ -30,6 +30,13 @@ name = "dsu"
 version = "0.1.0"
 
 [[package]]
+name = "dynamic_segment_tree"
+version = "0.1.0"
+dependencies = [
+ "monoid",
+]
+
+[[package]]
 name = "fenwick_tree"
 version = "0.1.0"
 dependencies = [
@@ -173,4 +180,13 @@ version = "0.1.0"
 dependencies = [
  "proconio",
  "rle",
+]
+
+[[package]]
+name = "yuki789_1"
+version = "0.1.0"
+dependencies = [
+ "dynamic_segment_tree",
+ "monoid_util",
+ "proconio",
 ]
