@@ -158,6 +158,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "verify_dynamic_segment_tree"
+version = "0.1.0"
+dependencies = [
+ "dynamic_segment_tree",
+ "modint",
+ "monoid_util",
+ "proconio",
+]
+
+[[package]]
 name = "verify_fenwick_tree"
 version = "0.1.0"
 dependencies = [
