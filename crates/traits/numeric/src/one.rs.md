@@ -35,7 +35,7 @@ data:
   - icon: ':warning:'
     path: crates/traits/numeric/src/zero.rs
     title: crates/traits/numeric/src/zero.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
   _extendedVerifiedWith: []

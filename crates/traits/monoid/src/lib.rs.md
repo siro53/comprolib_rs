@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':x:'
+    path: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
+    title: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
   - icon: ':heavy_check_mark:'
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
   _extendedVerifiedWith: []
@@ -28,6 +31,7 @@ data:
   path: crates/traits/monoid/src/lib.rs
   requiredBy:
   - crates/ds/segment_tree/segment_tree/src/lib.rs
+  - crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
   - crates/util/monoid_util/src/lib.rs
   timestamp: '2025-08-30 21:29:59+09:00'
   verificationStatus: LIBRARY_NO_TESTS
