@@ -1,65 +1,65 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/add.rs
     title: crates/util/monoid_util/src/add.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/affine.rs
     title: crates/util/monoid_util/src/affine.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_and.rs
     title: crates/util/monoid_util/src/bitwise_and.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_or.rs
     title: crates/util/monoid_util/src/bitwise_or.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_xor.rs
     title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/max.rs
     title: crates/util/monoid_util/src/max.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min.rs
     title: crates/util/monoid_util/src/min.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min_with_index.rs
     title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/add.rs
     title: crates/util/monoid_util/src/add.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/affine.rs
     title: crates/util/monoid_util/src/affine.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_and.rs
     title: crates/util/monoid_util/src/bitwise_and.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_or.rs
     title: crates/util/monoid_util/src/bitwise_or.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_xor.rs
     title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/max.rs
     title: crates/util/monoid_util/src/max.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min.rs
     title: crates/util/monoid_util/src/min.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min_with_index.rs
     title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
   _extendedVerifiedWith:
@@ -69,12 +69,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
     title: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/yukicoder/yuki789/yuki789_1/src/main.rs
     title: verify/yukicoder/yuki789/yuki789_1/src/main.rs
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -118,7 +118,7 @@ data:
   - crates/util/monoid_util/src/bitwise_and.rs
   - crates/util/monoid_util/src/bitwise_or.rs
   timestamp: '2025-08-31 18:12:56+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/yukicoder/yuki789/yuki789_1/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs

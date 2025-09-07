@@ -4,37 +4,37 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/add.rs
     title: crates/util/monoid_util/src/add.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/affine.rs
     title: crates/util/monoid_util/src/affine.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_and.rs
     title: crates/util/monoid_util/src/bitwise_and.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_or.rs
     title: crates/util/monoid_util/src/bitwise_or.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/bitwise_xor.rs
     title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/lib.rs
     title: crates/util/monoid_util/src/lib.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/max.rs
     title: crates/util/monoid_util/src/max.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/max_with_index.rs
     title: crates/util/monoid_util/src/max_with_index.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min.rs
     title: crates/util/monoid_util/src/min.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/min_with_index.rs
     title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: crates/util/monoid_util/src/mul.rs
     title: crates/util/monoid_util/src/mul.rs
   _extendedRequiredBy: []

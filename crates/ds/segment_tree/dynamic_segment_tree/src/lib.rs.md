@@ -6,12 +6,12 @@ data:
     title: crates/traits/monoid/src/lib.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/yukicoder/yuki789/yuki789_1/src/main.rs
     title: verify/yukicoder/yuki789/yuki789_1/src/main.rs
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -52,7 +52,7 @@ data:
     \ l, mid, pos, value);\n        } else {\n            Self::_set(&mut ptr.children_node[1],\
     \ mid, r, pos, value);\n        }\n        let left_value = if ptr.children_node[0].is_none()\
     \ {\n            M::unit()\n        } else {\n            ptr.children_node[0].as_mut().unwrap().value.clone()\n\
-    \        };\n        let right_value = if ptr.children_node[0].is_none() {\n \
+    \        };\n        let right_value = if ptr.children_node[1].is_none() {\n \
     \           M::unit()\n        } else {\n            ptr.children_node[1].as_mut().unwrap().value.clone()\n\
     \        };\n        ptr.value = M::op(&left_value, &right_value);\n    }\n\n\
     \    fn _get(node: &Option<Box<Node<M>>>, l: i64, r: i64, pos: i64) -> M::ValueType\
@@ -73,8 +73,8 @@ data:
   isVerificationFile: false
   path: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
   requiredBy: []
-  timestamp: '2025-09-07 18:39:39+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2025-09-07 18:47:19+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/yukicoder/yuki789/yuki789_1/src/main.rs
 documentation_of: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs

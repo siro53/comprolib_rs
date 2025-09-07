@@ -19,7 +19,7 @@ data:
       title: crates/ds/fenwick_tree/src/range_fenwick_tree.rs
   - name: crates/ds/segment_tree/dynamic_segment_tree/src
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
       title: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
   - name: crates/ds/segment_tree/segment_tree/src
@@ -77,37 +77,37 @@ data:
       title: crates/traits/numeric/src/zero.rs
   - name: crates/util/monoid_util/src
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/add.rs
       title: crates/util/monoid_util/src/add.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/affine.rs
       title: crates/util/monoid_util/src/affine.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/bitwise_and.rs
       title: crates/util/monoid_util/src/bitwise_and.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/bitwise_or.rs
       title: crates/util/monoid_util/src/bitwise_or.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/bitwise_xor.rs
       title: crates/util/monoid_util/src/bitwise_xor.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/lib.rs
       title: crates/util/monoid_util/src/lib.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/max.rs
       title: crates/util/monoid_util/src/max.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/max_with_index.rs
       title: crates/util/monoid_util/src/max_with_index.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/min.rs
       title: crates/util/monoid_util/src/min.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/min_with_index.rs
       title: crates/util/monoid_util/src/min_with_index.rs
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: crates/util/monoid_util/src/mul.rs
       title: crates/util/monoid_util/src/mul.rs
   verificationCategories:
@@ -143,7 +143,7 @@ data:
       title: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
   - name: verify/yukicoder/yuki789/yuki789_1/src
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: verify/yukicoder/yuki789/yuki789_1/src/main.rs
       title: verify/yukicoder/yuki789/yuki789_1/src/main.rs
 layout: toppage
