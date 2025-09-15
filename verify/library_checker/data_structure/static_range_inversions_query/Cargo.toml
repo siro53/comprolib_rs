@@ -1,0 +1,10 @@
+[package]
+name = "static_range_inversions_query"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+compress = { version = "0.1.0", path = "../../../../crates/misc/compress" }
+fenwick_tree = { version = "0.1.0", path = "../../../../crates/ds/fenwick_tree" }
+mo = { version = "0.1.0", path = "../../../../crates/algo/mo" }
+proconio = { version = "0.5.0", features = ["derive"] }

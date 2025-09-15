@@ -8,6 +8,21 @@ pub struct Compress<T> {
     is_built: bool,
 }
 
+impl<S> FromIterator<S> for Compress<S>
+where
+    S: PartialEq + Ord,
+{
+    fn from_iter<T: IntoIterator<Item = S>>(iter: T) -> Self {
+        let mut data = iter.into_iter().collect::<Vec<_>>();
+        data.sort();
+        data.dedup();
+        Self {
+            data,
+            is_built: true,
+        }
+    }
+}
+
 impl<T> Compress<T>
 where
     T: Clone + PartialOrd + Ord,
