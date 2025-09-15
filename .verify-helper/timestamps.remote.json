@@ -1,9 +1,10 @@
 {
-"verify/aoj/aoj2426/src/main.rs": "2025-08-31 23:58:05 +0900",
+"verify/aoj/aoj2426/src/main.rs": "2025-09-15 18:36:07 +0900",
 "verify/library_checker/data_structure/point_add_range_sum/verify_fenwick_tree/src/main.rs": "2025-08-31 22:36:44 +0900",
 "verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs": "2025-08-31 22:36:44 +0900",
 "verify/library_checker/data_structure/point_set_range_composite/src/main.rs": "2025-08-31 18:19:07 +0900",
 "verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs": "2025-09-07 18:59:35 +0900",
+"verify/library_checker/data_structure/static_range_inversions_query/src/main.rs": "2025-09-15 18:36:07 +0900",
 "verify/library_checker/data_structure/unionfind/src/main.rs": "2025-08-18 07:51:48 +0900",
 "verify/yukicoder/yuki1469/yuki1469_1/src/main.rs": "2025-09-06 15:34:11 +0900",
 "verify/yukicoder/yuki789/yuki789_1/src/main.rs": "2025-09-07 18:47:19 +0900"
