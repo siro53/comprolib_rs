@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: verify/aoj/aoj2426/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-31 23:58:05+09:00'
+  timestamp: '2025-09-15 18:36:07+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/aoj/aoj2426/src/main.rs

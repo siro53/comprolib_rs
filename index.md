@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: crates/algo/mo/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: crates/algo/mo/src/lib.rs
+      title: crates/algo/mo/src/lib.rs
   - name: crates/ds/dsu/src
     pages:
     - icon: ':heavy_check_mark:'
@@ -136,6 +141,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
       title: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
+  - name: verify/library_checker/data_structure/static_range_inversions_query/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/library_checker/data_structure/static_range_inversions_query/src/main.rs
+      title: verify/library_checker/data_structure/static_range_inversions_query/src/main.rs
   - name: verify/library_checker/data_structure/unionfind/src
     pages:
     - icon: ':heavy_check_mark:'
