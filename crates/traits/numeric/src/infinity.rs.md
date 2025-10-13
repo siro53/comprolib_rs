@@ -20,6 +20,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/ds/fenwick_tree/src/lib.rs
     title: crates/ds/fenwick_tree/src/lib.rs
+  - icon: ':warning:'
+    path: crates/graph/graph/src/lib.rs
+    title: crates/graph/graph/src/lib.rs
   - icon: ':heavy_check_mark:'
     path: crates/misc/cumulative_sum_2d/src/lib.rs
     title: crates/misc/cumulative_sum_2d/src/lib.rs
@@ -84,6 +87,7 @@ data:
   - crates/ds/binary_trie/src/lib.rs
   - crates/modint/src/lib.rs
   - crates/misc/cumulative_sum_2d/src/lib.rs
+  - crates/graph/graph/src/lib.rs
   - crates/util/monoid_util/src/lib.rs
   timestamp: '2025-08-31 11:54:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS

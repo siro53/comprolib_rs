@@ -37,6 +37,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/ds/segment_tree/segment_tree/src/lib.rs
       title: crates/ds/segment_tree/segment_tree/src/lib.rs
+  - name: crates/graph/graph/src
+    pages:
+    - icon: ':warning:'
+      path: crates/graph/graph/src/edge.rs
+      title: crates/graph/graph/src/edge.rs
+    - icon: ':warning:'
+      path: crates/graph/graph/src/graph.rs
+      title: crates/graph/graph/src/graph.rs
+    - icon: ':warning:'
+      path: crates/graph/graph/src/lib.rs
+      title: crates/graph/graph/src/lib.rs
+    - icon: ':warning:'
+      path: crates/graph/graph/src/shortest_path.rs
+      title: crates/graph/graph/src/shortest_path.rs
   - name: crates/misc/compress/src
     pages:
     - icon: ':heavy_check_mark:'
