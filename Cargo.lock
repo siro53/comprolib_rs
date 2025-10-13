@@ -327,6 +327,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "vertex_add_subtree_sum"
+version = "0.1.0"
+dependencies = [
+ "fenwick_tree",
+ "graph",
+ "heavy_light_decomposition",
+ "proconio",
+]
+
+[[package]]
 name = "wasi"
 version = "0.14.7+wasi-0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
