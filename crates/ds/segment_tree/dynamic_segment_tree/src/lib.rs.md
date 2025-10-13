@@ -79,8 +79,8 @@ data:
   timestamp: '2025-09-07 18:47:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/yukicoder/yuki789/yuki789_1/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
+  - verify/yukicoder/yuki789/yuki789_1/src/main.rs
 documentation_of: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
 layout: document
 redirect_from:
