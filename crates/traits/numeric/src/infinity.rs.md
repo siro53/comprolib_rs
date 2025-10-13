@@ -20,7 +20,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/ds/fenwick_tree/src/lib.rs
     title: crates/ds/fenwick_tree/src/lib.rs
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/lib.rs
     title: crates/graph/graph/src/lib.rs
   - icon: ':heavy_check_mark:'

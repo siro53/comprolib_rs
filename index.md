@@ -39,18 +39,21 @@ data:
       title: crates/ds/segment_tree/segment_tree/src/lib.rs
   - name: crates/graph/graph/src
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: crates/graph/graph/src/edge.rs
       title: crates/graph/graph/src/edge.rs
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: crates/graph/graph/src/graph.rs
       title: crates/graph/graph/src/graph.rs
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: crates/graph/graph/src/lib.rs
       title: crates/graph/graph/src/lib.rs
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: crates/graph/graph/src/shortest_path.rs
       title: crates/graph/graph/src/shortest_path.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/graph/graph/src/tree_util.rs
+      title: crates/graph/graph/src/tree_util.rs
   - name: crates/misc/compress/src
     pages:
     - icon: ':heavy_check_mark:'
@@ -175,6 +178,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/library_checker/data_structure/unionfind/src/main.rs
       title: verify/library_checker/data_structure/unionfind/src/main.rs
+  - name: verify/library_checker/tree/tree_diameter/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/library_checker/tree/tree_diameter/src/main.rs
+      title: verify/library_checker/tree/tree_diameter/src/main.rs
   - name: verify/yukicoder/yuki1469/yuki1469_1/src
     pages:
     - icon: ':heavy_check_mark:'

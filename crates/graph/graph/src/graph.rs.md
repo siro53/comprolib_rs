@@ -1,29 +1,38 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/lib.rs
     title: crates/graph/graph/src/lib.rs
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/shortest_path.rs
     title: crates/graph/graph/src/shortest_path.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/tree_util.rs
+    title: crates/graph/graph/src/tree_util.rs
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/lib.rs
     title: crates/graph/graph/src/lib.rs
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/shortest_path.rs
     title: crates/graph/graph/src/shortest_path.rs
-  _extendedVerifiedWith: []
+  - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/tree_util.rs
+    title: crates/graph/graph/src/tree_util.rs
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/library_checker/tree/tree_diameter/src/main.rs
+    title: verify/library_checker/tree/tree_diameter/src/main.rs
   _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -65,15 +74,18 @@ data:
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/lib.rs
   - crates/graph/graph/src/shortest_path.rs
+  - crates/graph/graph/src/tree_util.rs
   isVerificationFile: false
   path: crates/graph/graph/src/graph.rs
   requiredBy:
   - crates/graph/graph/src/lib.rs
+  - crates/graph/graph/src/tree_util.rs
   - crates/graph/graph/src/shortest_path.rs
   - crates/graph/graph/src/edge.rs
-  timestamp: '2025-10-13 16:28:18+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2025-10-13 18:23:10+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/library_checker/tree/tree_diameter/src/main.rs
 documentation_of: crates/graph/graph/src/graph.rs
 layout: document
 redirect_from:
