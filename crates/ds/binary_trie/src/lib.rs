@@ -229,3 +229,71 @@ impl<T: BinaryTrieTrait> BinaryTrie<T> {
         self.all_xor_value ^= value;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::BinaryTrie;
+    use rand::Rng;
+    use superslice::Ext;
+
+    #[test]
+    fn binary_trie_test() {
+        const TESTCASE_NUM: usize = 50;
+        const QUERY_NUM: usize = 10000;
+        for testcase_id in 0..TESTCASE_NUM {
+            let mut a = Vec::<u32>::new();
+            let mut bt = BinaryTrie::<u32>::new();
+            let mut rng = rand::rng();
+            for _ in 0..QUERY_NUM {
+                let t: usize = if a.is_empty() {
+                    0
+                } else {
+                    rng.random_range(0..7)
+                };
+                match t {
+                    0 => {
+                        // insert
+                        let x: u32 = rng.random();
+                        bt.insert(x);
+                        a.push(x);
+                    }
+                    1 => {
+                        // erase
+                        let a_len = a.len();
+                        let idx = rng.random_range(0..a_len);
+                        a.swap(idx, a_len - 1);
+                        bt.erase(*a.last().unwrap());
+                        a.pop();
+                    }
+                    2 => {
+                        // min_element
+                        assert!(*a.iter().reduce(std::cmp::min).unwrap() == bt.min_element());
+                    }
+                    3 => {
+                        // max_element
+                        assert!(*a.iter().reduce(std::cmp::max).unwrap() == bt.max_element());
+                    }
+                    4 => {
+                        // kth_element
+                        a.sort();
+                        let a_len = a.len();
+                        let k = rng.random_range(0..a_len);
+                        assert!(a[k] == bt.get_kth_min_element(k));
+                    }
+                    5 => {
+                        // lower_bound
+                        a.sort();
+                        let a_len = a.len();
+                        let k = rng.random_range(0..a_len);
+                        let index1 = bt.lower_bound(a[k]);
+                        let index2 = a.lower_bound(&a[k]);
+                        assert!(index1 == index2);
+                    }
+                    6 => {}
+                    _ => unreachable!(),
+                }
+            }
+            eprintln!("passed Test {} / {}", testcase_id + 1, TESTCASE_NUM);
+        }
+    }
+}
