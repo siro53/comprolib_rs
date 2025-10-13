@@ -193,6 +193,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/library_checker/tree/vertex_add_path_sum/src/main.rs
       title: verify/library_checker/tree/vertex_add_path_sum/src/main.rs
+  - name: verify/library_checker/tree/vertex_add_subtree_sum/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
+      title: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
   - name: verify/yukicoder/yuki1469/yuki1469_1/src
     pages:
     - icon: ':heavy_check_mark:'
