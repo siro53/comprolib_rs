@@ -337,6 +337,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "vertex_set_path_composite"
+version = "0.1.0"
+dependencies = [
+ "graph",
+ "heavy_light_decomposition",
+ "modint",
+ "monoid",
+ "monoid_util",
+ "proconio",
+ "segment_tree",
+]
+
+[[package]]
 name = "wasi"
 version = "0.14.7+wasi-0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
