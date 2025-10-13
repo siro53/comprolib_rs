@@ -49,7 +49,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/tree/tree_diameter/src/main.rs
   requiredBy: []
-  timestamp: '2025-10-13 18:23:10+09:00'
+  timestamp: '2025-10-14 00:04:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/tree/tree_diameter/src/main.rs

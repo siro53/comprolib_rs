@@ -26,10 +26,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/tree_util.rs
     title: crates/graph/graph/src/tree_util.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/graph/heavy_light_decomposition/src/lib.rs
+    title: crates/graph/heavy_light_decomposition/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/tree/tree_diameter/src/main.rs
     title: verify/library_checker/tree/tree_diameter/src/main.rs
+  - icon: ':heavy_check_mark:'
+    path: verify/library_checker/tree/vertex_add_path_sum/src/main.rs
+    title: verify/library_checker/tree/vertex_add_path_sum/src/main.rs
   _isVerificationFailed: false
   _pathExtension: rs
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -59,9 +65,11 @@ data:
   - crates/graph/graph/src/tree_util.rs
   - crates/graph/graph/src/shortest_path.rs
   - crates/graph/graph/src/graph.rs
-  timestamp: '2025-10-13 18:23:10+09:00'
+  - crates/graph/heavy_light_decomposition/src/lib.rs
+  timestamp: '2025-10-14 00:04:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify/library_checker/tree/vertex_add_path_sum/src/main.rs
   - verify/library_checker/tree/tree_diameter/src/main.rs
 documentation_of: crates/graph/graph/src/edge.rs
 layout: document

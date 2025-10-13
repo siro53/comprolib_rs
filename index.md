@@ -54,6 +54,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/graph/graph/src/tree_util.rs
       title: crates/graph/graph/src/tree_util.rs
+  - name: crates/graph/heavy_light_decomposition/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: crates/graph/heavy_light_decomposition/src/lib.rs
+      title: crates/graph/heavy_light_decomposition/src/lib.rs
   - name: crates/misc/compress/src
     pages:
     - icon: ':heavy_check_mark:'
@@ -183,6 +188,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/library_checker/tree/tree_diameter/src/main.rs
       title: verify/library_checker/tree/tree_diameter/src/main.rs
+  - name: verify/library_checker/tree/vertex_add_path_sum/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/library_checker/tree/vertex_add_path_sum/src/main.rs
+      title: verify/library_checker/tree/vertex_add_path_sum/src/main.rs
   - name: verify/yukicoder/yuki1469/yuki1469_1/src
     pages:
     - icon: ':heavy_check_mark:'
