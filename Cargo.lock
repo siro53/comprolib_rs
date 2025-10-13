@@ -78,6 +78,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "heavy_light_decomposition"
+version = "0.1.0"
+dependencies = [
+ "graph",
+]
+
+[[package]]
 name = "libc"
 version = "0.2.177"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -307,6 +314,16 @@ dependencies = [
  "monoid_util",
  "proconio",
  "segment_tree",
+]
+
+[[package]]
+name = "vertex_add_path_sum"
+version = "0.1.0"
+dependencies = [
+ "fenwick_tree",
+ "graph",
+ "heavy_light_decomposition",
+ "proconio",
 ]
 
 [[package]]

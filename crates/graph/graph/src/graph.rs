@@ -5,6 +5,7 @@ use std::{
 
 use crate::edge::Edge;
 
+#[derive(Clone)]
 pub struct GraphBase<Cost: Clone, Marker> {
     n: usize,
     m: usize,
@@ -52,8 +53,13 @@ where
     }
 }
 
+#[derive(Clone)]
 pub enum UndirectedGraphMarker {}
+
+#[derive(Clone)]
 pub enum DirectedGraphMarker {}
+
+#[derive(Clone)]
 pub enum TreeMarker {}
 
 pub type UndirectedGraph<Cost> = GraphBase<Cost, UndirectedGraphMarker>;
