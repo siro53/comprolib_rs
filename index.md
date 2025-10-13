@@ -87,7 +87,7 @@ data:
       title: crates/modint/src/static_modint.rs
   - name: crates/traits/monoid/src
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: crates/traits/monoid/src/lib.rs
       title: crates/traits/monoid/src/lib.rs
   - name: crates/traits/numeric/src
@@ -198,6 +198,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
       title: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
+  - name: verify/library_checker/tree/vertex_set_path_composite/src
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
+      title: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   - name: verify/yukicoder/yuki1469/yuki1469_1/src
     pages:
     - icon: ':heavy_check_mark:'

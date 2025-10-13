@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/lib.rs
     title: crates/traits/monoid/src/lib.rs
   - icon: ':warning:'
@@ -91,6 +91,9 @@ data:
     path: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
     title: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
   - icon: ':heavy_check_mark:'
+    path: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
+    title: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
+  - icon: ':heavy_check_mark:'
     path: verify/yukicoder/yuki789/yuki789_1/src/main.rs
     title: verify/yukicoder/yuki789/yuki789_1/src/main.rs
   _isVerificationFailed: false
@@ -161,6 +164,7 @@ data:
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
   - verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
+  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   - verify/yukicoder/yuki789/yuki789_1/src/main.rs
 documentation_of: crates/util/monoid_util/src/lib.rs
 layout: document

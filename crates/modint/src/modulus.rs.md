@@ -21,6 +21,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
     title: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
+  - icon: ':heavy_check_mark:'
+    path: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
+    title: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   _isVerificationFailed: false
   _pathExtension: rs
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,6 +50,7 @@ data:
   verifiedWith:
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
+  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
 documentation_of: crates/modint/src/modulus.rs
 layout: document
 redirect_from:

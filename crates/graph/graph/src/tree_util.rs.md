@@ -39,6 +39,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
     title: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
+  - icon: ':heavy_check_mark:'
+    path: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
+    title: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   _isVerificationFailed: false
   _pathExtension: rs
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -91,6 +94,7 @@ data:
   verifiedWith:
   - verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
   - verify/library_checker/tree/vertex_add_path_sum/src/main.rs
+  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   - verify/library_checker/tree/tree_diameter/src/main.rs
 documentation_of: crates/graph/graph/src/tree_util.rs
 layout: document
