@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/data_structure/set_xor_min/src/main.rs
   requiredBy: []
-  timestamp: '2025-10-13 12:38:49+09:00'
+  timestamp: '2025-10-13 14:17:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/set_xor_min/src/main.rs

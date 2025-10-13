@@ -113,7 +113,37 @@ data:
     \ {\n            0\n        } else {\n            self.root.as_ref().unwrap().count\n\
     \        }\n    }\n\n    pub fn is_empty(&self) -> bool {\n        self.root.is_none()\
     \ || self.root.as_ref().unwrap().count == 0\n    }\n\n    pub fn all_xor(&mut\
-    \ self, value: T) {\n        self.all_xor_value ^= value;\n    }\n}\n"
+    \ self, value: T) {\n        self.all_xor_value ^= value;\n    }\n}\n\n#[cfg(test)]\n\
+    mod tests {\n    use crate::BinaryTrie;\n    use rand::Rng;\n    use superslice::Ext;\n\
+    \n    #[test]\n    fn binary_trie_test() {\n        const TESTCASE_NUM: usize\
+    \ = 50;\n        const QUERY_NUM: usize = 10000;\n        for testcase_id in 0..TESTCASE_NUM\
+    \ {\n            let mut a = Vec::<u32>::new();\n            let mut bt = BinaryTrie::<u32>::new();\n\
+    \            let mut rng = rand::rng();\n            for _ in 0..QUERY_NUM {\n\
+    \                let t: usize = if a.is_empty() {\n                    0\n   \
+    \             } else {\n                    rng.random_range(0..7)\n         \
+    \       };\n                match t {\n                    0 => {\n          \
+    \              // insert\n                        let x: u32 = rng.random();\n\
+    \                        bt.insert(x);\n                        a.push(x);\n \
+    \                   }\n                    1 => {\n                        //\
+    \ erase\n                        let a_len = a.len();\n                      \
+    \  let idx = rng.random_range(0..a_len);\n                        a.swap(idx,\
+    \ a_len - 1);\n                        bt.erase(*a.last().unwrap());\n       \
+    \                 a.pop();\n                    }\n                    2 => {\n\
+    \                        // min_element\n                        assert!(*a.iter().reduce(std::cmp::min).unwrap()\
+    \ == bt.min_element());\n                    }\n                    3 => {\n \
+    \                       // max_element\n                        assert!(*a.iter().reduce(std::cmp::max).unwrap()\
+    \ == bt.max_element());\n                    }\n                    4 => {\n \
+    \                       // kth_element\n                        a.sort();\n  \
+    \                      let a_len = a.len();\n                        let k = rng.random_range(0..a_len);\n\
+    \                        assert!(a[k] == bt.get_kth_min_element(k));\n       \
+    \             }\n                    5 => {\n                        // lower_bound\n\
+    \                        a.sort();\n                        let a_len = a.len();\n\
+    \                        let k = rng.random_range(0..a_len);\n               \
+    \         let index1 = bt.lower_bound(a[k]);\n                        let index2\
+    \ = a.lower_bound(&a[k]);\n                        assert!(index1 == index2);\n\
+    \                    }\n                    6 => {}\n                    _ =>\
+    \ unreachable!(),\n                }\n            }\n            eprintln!(\"\
+    passed Test {} / {}\", testcase_id + 1, TESTCASE_NUM);\n        }\n    }\n}\n"
   dependsOn:
   - crates/traits/numeric/src/bound.rs
   - crates/traits/numeric/src/infinity.rs
@@ -123,7 +153,7 @@ data:
   isVerificationFile: false
   path: crates/ds/binary_trie/src/lib.rs
   requiredBy: []
-  timestamp: '2025-10-13 12:38:49+09:00'
+  timestamp: '2025-10-13 14:17:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/data_structure/set_xor_min/src/main.rs
