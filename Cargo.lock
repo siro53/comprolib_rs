@@ -12,6 +12,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "binary_trie"
+version = "0.1.0"
+dependencies = [
+ "numeric",
+]
+
+[[package]]
 name = "compress"
 version = "0.1.0"
 dependencies = [
@@ -128,6 +135,14 @@ name = "segment_tree"
 version = "0.1.0"
 dependencies = [
  "monoid",
+]
+
+[[package]]
+name = "set_xor_min"
+version = "0.1.0"
+dependencies = [
+ "binary_trie",
+ "proconio",
 ]
 
 [[package]]

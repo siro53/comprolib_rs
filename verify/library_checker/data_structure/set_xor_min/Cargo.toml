@@ -1,0 +1,8 @@
+[package]
+name = "set_xor_min"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+binary_trie = { version = "0.1.0", path = "../../../../crates/ds/binary_trie" }
+proconio = { version = "0.5.0", features = ["derive"] }
