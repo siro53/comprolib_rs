@@ -3,14 +3,6 @@
 version = 4
 
 [[package]]
-name = "aoj0519"
-version = "0.1.0"
-dependencies = [
- "graph",
- "proconio",
-]
-
-[[package]]
 name = "aoj2426"
 version = "0.1.0"
 dependencies = [
