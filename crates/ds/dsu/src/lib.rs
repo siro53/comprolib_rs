@@ -45,8 +45,9 @@ impl Dsu {
         lu
     }
 
-    pub fn size(&self, u: usize) -> usize {
-        -self.parent_or_size[u] as usize
+    pub fn size(&mut self, u: usize) -> usize {
+        let lu = self.leader(u);
+        -self.parent_or_size[lu] as usize
     }
 
     pub fn groups(&mut self) -> Vec<Vec<usize>> {
