@@ -32,7 +32,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/data_structure/unionfind/src/main.rs
   requiredBy: []
-  timestamp: '2025-08-18 07:51:48+09:00'
+  timestamp: '2025-10-14 09:57:23+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/unionfind/src/main.rs
