@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/directed_graph_util.rs
+    title: crates/graph/graph/src/directed_graph_util.rs
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
   - icon: ':heavy_check_mark:'
@@ -14,6 +17,9 @@ data:
     path: crates/graph/graph/src/tree_util.rs
     title: crates/graph/graph/src/tree_util.rs
   _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/directed_graph_util.rs
+    title: crates/graph/graph/src/directed_graph_util.rs
   - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
@@ -78,6 +84,7 @@ data:
     \ e.to())));\n                }\n            });\n        }\n        (dist, prev)\n\
     \    }\n}\n"
   dependsOn:
+  - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/graph.rs
   - crates/graph/graph/src/lib.rs
@@ -86,11 +93,12 @@ data:
   path: crates/graph/graph/src/shortest_path.rs
   requiredBy:
   - crates/graph/graph/src/lib.rs
+  - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/tree_util.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/graph.rs
   - crates/graph/heavy_light_decomposition/src/lib.rs
-  timestamp: '2025-10-14 00:04:46+09:00'
+  timestamp: '2025-10-14 10:00:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs

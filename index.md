@@ -40,6 +40,9 @@ data:
   - name: crates/graph/graph/src
     pages:
     - icon: ':heavy_check_mark:'
+      path: crates/graph/graph/src/directed_graph_util.rs
+      title: crates/graph/graph/src/directed_graph_util.rs
+    - icon: ':heavy_check_mark:'
       path: crates/graph/graph/src/edge.rs
       title: crates/graph/graph/src/edge.rs
     - icon: ':heavy_check_mark:'

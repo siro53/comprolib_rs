@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/directed_graph_util.rs
+    title: crates/graph/graph/src/directed_graph_util.rs
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
   - icon: ':heavy_check_mark:'
@@ -41,6 +44,7 @@ data:
     \            println!(\"{}\", path[i]);\n        } else {\n            print!(\"\
     {} \", path[i]);\n        }\n    }\n}\n"
   dependsOn:
+  - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/graph.rs
   - crates/graph/graph/src/lib.rs
@@ -49,7 +53,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/tree/tree_diameter/src/main.rs
   requiredBy: []
-  timestamp: '2025-10-14 00:04:46+09:00'
+  timestamp: '2025-10-14 10:00:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/tree/tree_diameter/src/main.rs

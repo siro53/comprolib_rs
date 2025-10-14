@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: crates/graph/graph/src/directed_graph_util.rs
-    title: crates/graph/graph/src/directed_graph_util.rs
-  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
   - icon: ':heavy_check_mark:'
@@ -16,11 +13,11 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/shortest_path.rs
     title: crates/graph/graph/src/shortest_path.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/tree_util.rs
+    title: crates/graph/graph/src/tree_util.rs
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
-    path: crates/graph/graph/src/directed_graph_util.rs
-    title: crates/graph/graph/src/directed_graph_util.rs
-  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
   - icon: ':heavy_check_mark:'
@@ -32,6 +29,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/shortest_path.rs
     title: crates/graph/graph/src/shortest_path.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/tree_util.rs
+    title: crates/graph/graph/src/tree_util.rs
   - icon: ':heavy_check_mark:'
     path: crates/graph/heavy_light_decomposition/src/lib.rs
     title: crates/graph/heavy_light_decomposition/src/lib.rs
@@ -59,40 +59,29 @@ data:
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "use std::ops::Add;\n\nuse numeric::zero::Zero;\n\nuse crate::graph::Tree;\n\
-    \nimpl<Cost> Tree<Cost>\nwhere\n    Cost: Clone + Copy + Zero + PartialOrd + Add<Output\
-    \ = Cost>,\n{\n    fn _diameter_dfs(\n        &self,\n        u: usize,\n    \
-    \    p: Option<usize>,\n        d: Cost,\n        depth: &mut Vec<Cost>,\n   \
-    \     parent: &mut Vec<Option<usize>>,\n    ) {\n        depth[u] = d;\n     \
-    \   parent[u] = p;\n        self[u].iter().for_each(|e| {\n            if p.is_some()\
-    \ && e.to() == p.unwrap() {\n                return;\n            }\n        \
-    \    self._diameter_dfs(e.to(), Some(u), d + e.cost(), depth, parent);\n     \
-    \   });\n    }\n\n    pub fn diameter(&self) -> (Cost, Vec<usize>) {\n       \
-    \ let mut depth: Vec<Cost> = vec![Cost::zero(); self.size()];\n        let mut\
-    \ parent: Vec<Option<usize>> = vec![None; self.size()];\n        self._diameter_dfs(0,\
-    \ None, Cost::zero(), &mut depth, &mut parent);\n        let from = depth\n  \
-    \          .iter()\n            .enumerate()\n            .reduce(|acc, elem|\
-    \ {\n                if acc.1 < elem.1 {\n                    return elem;\n \
-    \               }\n                acc\n            })\n            .unwrap()\n\
-    \            .0;\n        self._diameter_dfs(from, None, Cost::zero(), &mut depth,\
-    \ &mut parent);\n        let to = depth\n            .iter()\n            .enumerate()\n\
-    \            .reduce(|acc, elem| {\n                if acc.1 < elem.1 {\n    \
-    \                return elem;\n                }\n                acc\n      \
-    \      })\n            .unwrap()\n            .0;\n        let mut path = vec![to];\n\
-    \        loop {\n            let nxt = parent[*path.last().unwrap()];\n      \
-    \      if nxt.is_none() {\n                break;\n            }\n           \
-    \ path.push(nxt.unwrap());\n        }\n        (depth[to], path)\n    }\n}\n"
+  code: "use crate::graph::DirectedGraph;\n\nimpl<Cost> DirectedGraph<Cost>\nwhere\n\
+    \    Cost: Clone + Copy,\n{\n    pub fn topological_sort(&self) -> Option<Vec<usize>>\
+    \ {\n        let n = self.size();\n        let mut deg = vec![0_usize; n];\n \
+    \       for u in 0..n {\n            self[u].iter().for_each(|e| {\n         \
+    \       deg[e.to()] += 1;\n            });\n        }\n        let mut stack =\
+    \ Vec::<usize>::new();\n        let mut ret = Vec::<usize>::new();\n        deg.iter().enumerate().for_each(|(i,\
+    \ &d)| {\n            if d == 0 {\n                stack.push(i);\n          \
+    \  }\n        });\n        while let Some(u) = stack.pop() {\n            ret.push(u);\n\
+    \            self[u].iter().for_each(|e| {\n                let v = e.to();\n\
+    \                deg[v] -= 1;\n                if deg[v] == 0 {\n            \
+    \        stack.push(v);\n                }\n            });\n        }\n\n   \
+    \     if ret.len() == n { Some(ret) } else { None }\n    }\n}\n"
   dependsOn:
-  - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/graph.rs
   - crates/graph/graph/src/lib.rs
   - crates/graph/graph/src/shortest_path.rs
+  - crates/graph/graph/src/tree_util.rs
   isVerificationFile: false
-  path: crates/graph/graph/src/tree_util.rs
+  path: crates/graph/graph/src/directed_graph_util.rs
   requiredBy:
   - crates/graph/graph/src/lib.rs
-  - crates/graph/graph/src/directed_graph_util.rs
+  - crates/graph/graph/src/tree_util.rs
   - crates/graph/graph/src/shortest_path.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/graph.rs
@@ -104,10 +93,10 @@ data:
   - verify/library_checker/tree/vertex_add_path_sum/src/main.rs
   - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   - verify/library_checker/tree/tree_diameter/src/main.rs
-documentation_of: crates/graph/graph/src/tree_util.rs
+documentation_of: crates/graph/graph/src/directed_graph_util.rs
 layout: document
 redirect_from:
-- /library/crates/graph/graph/src/tree_util.rs
-- /library/crates/graph/graph/src/tree_util.rs.html
-title: crates/graph/graph/src/tree_util.rs
+- /library/crates/graph/graph/src/directed_graph_util.rs
+- /library/crates/graph/graph/src/directed_graph_util.rs.html
+title: crates/graph/graph/src/directed_graph_util.rs
 ---

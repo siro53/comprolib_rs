@@ -11,6 +11,9 @@ data:
     path: crates/ds/fenwick_tree/src/range_fenwick_tree.rs
     title: crates/ds/fenwick_tree/src/range_fenwick_tree.rs
   - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/directed_graph_util.rs
+    title: crates/graph/graph/src/directed_graph_util.rs
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
   - icon: ':heavy_check_mark:'
@@ -64,6 +67,7 @@ data:
   - crates/ds/fenwick_tree/src/fenwick_tree.rs
   - crates/ds/fenwick_tree/src/lib.rs
   - crates/ds/fenwick_tree/src/range_fenwick_tree.rs
+  - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/graph.rs
   - crates/graph/graph/src/lib.rs
@@ -73,7 +77,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
   requiredBy: []
-  timestamp: '2025-10-14 00:19:17+09:00'
+  timestamp: '2025-10-14 10:00:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs

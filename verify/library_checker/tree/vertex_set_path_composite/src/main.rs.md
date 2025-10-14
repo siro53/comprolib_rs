@@ -5,6 +5,9 @@ data:
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
   - icon: ':heavy_check_mark:'
+    path: crates/graph/graph/src/directed_graph_util.rs
+    title: crates/graph/graph/src/directed_graph_util.rs
+  - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/edge.rs
     title: crates/graph/graph/src/edge.rs
   - icon: ':heavy_check_mark:'
@@ -114,6 +117,7 @@ data:
     \            }\n            _ => unreachable!(),\n        }\n    }\n}\n"
   dependsOn:
   - crates/ds/segment_tree/segment_tree/src/lib.rs
+  - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/graph.rs
   - crates/graph/graph/src/lib.rs
@@ -138,7 +142,7 @@ data:
   isVerificationFile: true
   path: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   requiredBy: []
-  timestamp: '2025-10-14 01:27:51+09:00'
+  timestamp: '2025-10-14 10:00:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
