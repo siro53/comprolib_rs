@@ -109,23 +109,23 @@ data:
   isVerificationFile: false
   path: crates/util/monoid_util/src/mul.rs
   requiredBy:
-  - crates/util/monoid_util/src/max_with_index.rs
-  - crates/util/monoid_util/src/lib.rs
   - crates/util/monoid_util/src/affine.rs
-  - crates/util/monoid_util/src/min.rs
-  - crates/util/monoid_util/src/min_with_index.rs
-  - crates/util/monoid_util/src/bitwise_and.rs
-  - crates/util/monoid_util/src/bitwise_xor.rs
-  - crates/util/monoid_util/src/bitwise_or.rs
   - crates/util/monoid_util/src/add.rs
+  - crates/util/monoid_util/src/bitwise_and.rs
+  - crates/util/monoid_util/src/max_with_index.rs
+  - crates/util/monoid_util/src/bitwise_xor.rs
+  - crates/util/monoid_util/src/min_with_index.rs
+  - crates/util/monoid_util/src/min.rs
   - crates/util/monoid_util/src/max.rs
+  - crates/util/monoid_util/src/lib.rs
+  - crates/util/monoid_util/src/bitwise_or.rs
   timestamp: '2025-08-31 18:12:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
+  - verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
-  - verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
-  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   - verify/yukicoder/yuki789/yuki789_1/src/main.rs
 documentation_of: crates/util/monoid_util/src/mul.rs
 layout: document

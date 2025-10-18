@@ -97,19 +97,19 @@ data:
   isVerificationFile: false
   path: crates/graph/graph/src/graph.rs
   requiredBy:
-  - crates/graph/graph/src/lib.rs
-  - crates/graph/graph/src/directed_graph_util.rs
+  - crates/graph/heavy_light_decomposition/src/lib.rs
   - crates/graph/graph/src/tree_util.rs
+  - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/shortest_path.rs
   - crates/graph/graph/src/edge.rs
-  - crates/graph/heavy_light_decomposition/src/lib.rs
+  - crates/graph/graph/src/lib.rs
   timestamp: '2025-10-14 10:00:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
   - verify/library_checker/tree/vertex_add_path_sum/src/main.rs
-  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   - verify/library_checker/tree/tree_diameter/src/main.rs
+  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
+  - verify/library_checker/tree/vertex_add_subtree_sum/src/main.rs
 documentation_of: crates/graph/graph/src/graph.rs
 layout: document
 redirect_from:
