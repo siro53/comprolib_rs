@@ -2,8 +2,38 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/add.rs
+    title: crates/traits/monoid/src/add.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/affine.rs
+    title: crates/traits/monoid/src/affine.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/bitwise_and.rs
+    title: crates/traits/monoid/src/bitwise_and.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/bitwise_or.rs
+    title: crates/traits/monoid/src/bitwise_or.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/bitwise_xor.rs
+    title: crates/traits/monoid/src/bitwise_xor.rs
+  - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/lib.rs
     title: crates/traits/monoid/src/lib.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/max.rs
+    title: crates/traits/monoid/src/max.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/max_with_index.rs
+    title: crates/traits/monoid/src/max_with_index.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/min.rs
+    title: crates/traits/monoid/src/min.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/min_with_index.rs
+    title: crates/traits/monoid/src/min_with_index.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/mul.rs
+    title: crates/traits/monoid/src/mul.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -72,11 +102,21 @@ data:
     \ l, mid, ql, qr),\n            &Self::_prod(&ptr.children_node[1], mid, r, ql,\
     \ qr),\n        )\n    }\n}\n"
   dependsOn:
+  - crates/traits/monoid/src/add.rs
+  - crates/traits/monoid/src/affine.rs
+  - crates/traits/monoid/src/bitwise_and.rs
+  - crates/traits/monoid/src/bitwise_or.rs
+  - crates/traits/monoid/src/bitwise_xor.rs
   - crates/traits/monoid/src/lib.rs
+  - crates/traits/monoid/src/max.rs
+  - crates/traits/monoid/src/max_with_index.rs
+  - crates/traits/monoid/src/min.rs
+  - crates/traits/monoid/src/min_with_index.rs
+  - crates/traits/monoid/src/mul.rs
   isVerificationFile: false
   path: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
   requiredBy: []
-  timestamp: '2025-09-07 18:47:19+09:00'
+  timestamp: '2025-10-18 15:26:53+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs

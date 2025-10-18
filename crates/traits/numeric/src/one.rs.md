@@ -29,6 +29,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/modint/src/lib.rs
     title: crates/modint/src/lib.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/lib.rs
+    title: crates/traits/monoid/src/lib.rs
   - icon: ':warning:'
     path: crates/traits/numeric/src/bound.rs
     title: crates/traits/numeric/src/bound.rs
@@ -41,9 +44,6 @@ data:
   - icon: ':warning:'
     path: crates/traits/numeric/src/zero.rs
     title: crates/traits/numeric/src/zero.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/lib.rs
-    title: crates/util/monoid_util/src/lib.rs
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: rs
@@ -81,8 +81,8 @@ data:
   - crates/traits/numeric/src/zero.rs
   - crates/traits/numeric/src/infinity.rs
   - crates/traits/numeric/src/lib.rs
+  - crates/traits/monoid/src/lib.rs
   - crates/graph/graph/src/lib.rs
-  - crates/util/monoid_util/src/lib.rs
   timestamp: '2025-08-31 11:54:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

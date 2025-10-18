@@ -91,8 +91,38 @@ data:
   - name: crates/traits/monoid/src
     pages:
     - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/add.rs
+      title: crates/traits/monoid/src/add.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/affine.rs
+      title: crates/traits/monoid/src/affine.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/bitwise_and.rs
+      title: crates/traits/monoid/src/bitwise_and.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/bitwise_or.rs
+      title: crates/traits/monoid/src/bitwise_or.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/bitwise_xor.rs
+      title: crates/traits/monoid/src/bitwise_xor.rs
+    - icon: ':heavy_check_mark:'
       path: crates/traits/monoid/src/lib.rs
       title: crates/traits/monoid/src/lib.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/max.rs
+      title: crates/traits/monoid/src/max.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/max_with_index.rs
+      title: crates/traits/monoid/src/max_with_index.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/min.rs
+      title: crates/traits/monoid/src/min.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/min_with_index.rs
+      title: crates/traits/monoid/src/min_with_index.rs
+    - icon: ':heavy_check_mark:'
+      path: crates/traits/monoid/src/mul.rs
+      title: crates/traits/monoid/src/mul.rs
   - name: crates/traits/numeric/src
     pages:
     - icon: ':warning:'
@@ -110,41 +140,6 @@ data:
     - icon: ':warning:'
       path: crates/traits/numeric/src/zero.rs
       title: crates/traits/numeric/src/zero.rs
-  - name: crates/util/monoid_util/src
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/add.rs
-      title: crates/util/monoid_util/src/add.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/affine.rs
-      title: crates/util/monoid_util/src/affine.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/bitwise_and.rs
-      title: crates/util/monoid_util/src/bitwise_and.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/bitwise_or.rs
-      title: crates/util/monoid_util/src/bitwise_or.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/bitwise_xor.rs
-      title: crates/util/monoid_util/src/bitwise_xor.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/lib.rs
-      title: crates/util/monoid_util/src/lib.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/max.rs
-      title: crates/util/monoid_util/src/max.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/max_with_index.rs
-      title: crates/util/monoid_util/src/max_with_index.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/min.rs
-      title: crates/util/monoid_util/src/min.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/min_with_index.rs
-      title: crates/util/monoid_util/src/min_with_index.rs
-    - icon: ':heavy_check_mark:'
-      path: crates/util/monoid_util/src/mul.rs
-      title: crates/util/monoid_util/src/mul.rs
   verificationCategories:
   - name: verify/aoj/aoj2426/src
     pages:

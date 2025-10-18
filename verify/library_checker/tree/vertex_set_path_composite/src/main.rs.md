@@ -35,41 +35,38 @@ data:
     path: crates/modint/src/static_modint.rs
     title: crates/modint/src/static_modint.rs
   - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/add.rs
+    title: crates/traits/monoid/src/add.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/affine.rs
+    title: crates/traits/monoid/src/affine.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/bitwise_and.rs
+    title: crates/traits/monoid/src/bitwise_and.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/bitwise_or.rs
+    title: crates/traits/monoid/src/bitwise_or.rs
+  - icon: ':heavy_check_mark:'
+    path: crates/traits/monoid/src/bitwise_xor.rs
+    title: crates/traits/monoid/src/bitwise_xor.rs
+  - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/lib.rs
     title: crates/traits/monoid/src/lib.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/add.rs
-    title: crates/util/monoid_util/src/add.rs
+    path: crates/traits/monoid/src/max.rs
+    title: crates/traits/monoid/src/max.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/affine.rs
-    title: crates/util/monoid_util/src/affine.rs
+    path: crates/traits/monoid/src/max_with_index.rs
+    title: crates/traits/monoid/src/max_with_index.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/bitwise_and.rs
-    title: crates/util/monoid_util/src/bitwise_and.rs
+    path: crates/traits/monoid/src/min.rs
+    title: crates/traits/monoid/src/min.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/bitwise_or.rs
-    title: crates/util/monoid_util/src/bitwise_or.rs
+    path: crates/traits/monoid/src/min_with_index.rs
+    title: crates/traits/monoid/src/min_with_index.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/bitwise_xor.rs
-    title: crates/util/monoid_util/src/bitwise_xor.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/lib.rs
-    title: crates/util/monoid_util/src/lib.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/max.rs
-    title: crates/util/monoid_util/src/max.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/max_with_index.rs
-    title: crates/util/monoid_util/src/max_with_index.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/min.rs
-    title: crates/util/monoid_util/src/min.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/min_with_index.rs
-    title: crates/util/monoid_util/src/min_with_index.rs
-  - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/mul.rs
-    title: crates/util/monoid_util/src/mul.rs
+    path: crates/traits/monoid/src/mul.rs
+    title: crates/traits/monoid/src/mul.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -87,7 +84,7 @@ data:
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "// verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_set_path_composite\n\
     \nuse graph::graph::Tree;\nuse heavy_light_decomposition::HeavyLightDecomposition;\n\
-    use modint::ModInt998244353;\nuse monoid::Monoid;\nuse monoid_util::affine::{Affine,\
+    use modint::ModInt998244353;\nuse monoid::Monoid;\nuse monoid::affine::{Affine,\
     \ AffineOperator};\nuse proconio::{fastout, input};\nuse segment_tree::SegmentTree;\n\
     \ntype mint = ModInt998244353;\ntype AL = AffineOperator<mint, false>;\ntype AR\
     \ = AffineOperator<mint, true>;\n\n#[fastout]\nfn main() {\n    input! {\n   \
@@ -127,22 +124,21 @@ data:
   - crates/modint/src/lib.rs
   - crates/modint/src/modulus.rs
   - crates/modint/src/static_modint.rs
+  - crates/traits/monoid/src/add.rs
+  - crates/traits/monoid/src/affine.rs
+  - crates/traits/monoid/src/bitwise_and.rs
+  - crates/traits/monoid/src/bitwise_or.rs
+  - crates/traits/monoid/src/bitwise_xor.rs
   - crates/traits/monoid/src/lib.rs
-  - crates/util/monoid_util/src/add.rs
-  - crates/util/monoid_util/src/affine.rs
-  - crates/util/monoid_util/src/bitwise_and.rs
-  - crates/util/monoid_util/src/bitwise_or.rs
-  - crates/util/monoid_util/src/bitwise_xor.rs
-  - crates/util/monoid_util/src/lib.rs
-  - crates/util/monoid_util/src/max.rs
-  - crates/util/monoid_util/src/max_with_index.rs
-  - crates/util/monoid_util/src/min.rs
-  - crates/util/monoid_util/src/min_with_index.rs
-  - crates/util/monoid_util/src/mul.rs
+  - crates/traits/monoid/src/max.rs
+  - crates/traits/monoid/src/max_with_index.rs
+  - crates/traits/monoid/src/min.rs
+  - crates/traits/monoid/src/min_with_index.rs
+  - crates/traits/monoid/src/mul.rs
   isVerificationFile: true
   path: verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   requiredBy: []
-  timestamp: '2025-10-18 15:13:35+09:00'
+  timestamp: '2025-10-18 15:26:53+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/tree/vertex_set_path_composite/src/main.rs

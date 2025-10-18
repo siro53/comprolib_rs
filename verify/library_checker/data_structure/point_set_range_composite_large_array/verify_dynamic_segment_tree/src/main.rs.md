@@ -14,38 +14,38 @@ data:
     path: crates/modint/src/static_modint.rs
     title: crates/modint/src/static_modint.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/add.rs
-    title: crates/util/monoid_util/src/add.rs
+    path: crates/traits/monoid/src/add.rs
+    title: crates/traits/monoid/src/add.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/affine.rs
-    title: crates/util/monoid_util/src/affine.rs
+    path: crates/traits/monoid/src/affine.rs
+    title: crates/traits/monoid/src/affine.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/bitwise_and.rs
-    title: crates/util/monoid_util/src/bitwise_and.rs
+    path: crates/traits/monoid/src/bitwise_and.rs
+    title: crates/traits/monoid/src/bitwise_and.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/bitwise_or.rs
-    title: crates/util/monoid_util/src/bitwise_or.rs
+    path: crates/traits/monoid/src/bitwise_or.rs
+    title: crates/traits/monoid/src/bitwise_or.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/bitwise_xor.rs
-    title: crates/util/monoid_util/src/bitwise_xor.rs
+    path: crates/traits/monoid/src/bitwise_xor.rs
+    title: crates/traits/monoid/src/bitwise_xor.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/lib.rs
-    title: crates/util/monoid_util/src/lib.rs
+    path: crates/traits/monoid/src/lib.rs
+    title: crates/traits/monoid/src/lib.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/max.rs
-    title: crates/util/monoid_util/src/max.rs
+    path: crates/traits/monoid/src/max.rs
+    title: crates/traits/monoid/src/max.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/max_with_index.rs
-    title: crates/util/monoid_util/src/max_with_index.rs
+    path: crates/traits/monoid/src/max_with_index.rs
+    title: crates/traits/monoid/src/max_with_index.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/min.rs
-    title: crates/util/monoid_util/src/min.rs
+    path: crates/traits/monoid/src/min.rs
+    title: crates/traits/monoid/src/min.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/min_with_index.rs
-    title: crates/util/monoid_util/src/min_with_index.rs
+    path: crates/traits/monoid/src/min_with_index.rs
+    title: crates/traits/monoid/src/min_with_index.rs
   - icon: ':heavy_check_mark:'
-    path: crates/util/monoid_util/src/mul.rs
-    title: crates/util/monoid_util/src/mul.rs
+    path: crates/traits/monoid/src/mul.rs
+    title: crates/traits/monoid/src/mul.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -63,7 +63,7 @@ data:
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "// verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite_large_array\n\
     \nuse dynamic_segment_tree::DynamicSegmentTree;\nuse modint::ModInt998244353;\n\
-    use monoid_util::affine::{Affine, AffineOperator};\nuse proconio::{fastout, input};\n\
+    use monoid::affine::{Affine, AffineOperator};\nuse proconio::{fastout, input};\n\
     \ntype Mint = ModInt998244353;\ntype DynamicSegTree = DynamicSegmentTree<AffineOperator<Mint,\
     \ true>, 0, 1_000_000_000>;\n\n#[fastout]\nfn main() {\n    input! {\n       \
     \ _n: usize,\n        q: usize\n    };\n    let mut seg = DynamicSegTree::new();\n\
@@ -81,21 +81,21 @@ data:
   - crates/modint/src/lib.rs
   - crates/modint/src/modulus.rs
   - crates/modint/src/static_modint.rs
-  - crates/util/monoid_util/src/add.rs
-  - crates/util/monoid_util/src/affine.rs
-  - crates/util/monoid_util/src/bitwise_and.rs
-  - crates/util/monoid_util/src/bitwise_or.rs
-  - crates/util/monoid_util/src/bitwise_xor.rs
-  - crates/util/monoid_util/src/lib.rs
-  - crates/util/monoid_util/src/max.rs
-  - crates/util/monoid_util/src/max_with_index.rs
-  - crates/util/monoid_util/src/min.rs
-  - crates/util/monoid_util/src/min_with_index.rs
-  - crates/util/monoid_util/src/mul.rs
+  - crates/traits/monoid/src/add.rs
+  - crates/traits/monoid/src/affine.rs
+  - crates/traits/monoid/src/bitwise_and.rs
+  - crates/traits/monoid/src/bitwise_or.rs
+  - crates/traits/monoid/src/bitwise_xor.rs
+  - crates/traits/monoid/src/lib.rs
+  - crates/traits/monoid/src/max.rs
+  - crates/traits/monoid/src/max_with_index.rs
+  - crates/traits/monoid/src/min.rs
+  - crates/traits/monoid/src/min_with_index.rs
+  - crates/traits/monoid/src/mul.rs
   isVerificationFile: true
   path: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
   requiredBy: []
-  timestamp: '2025-09-07 18:59:35+09:00'
+  timestamp: '2025-10-18 15:26:53+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs

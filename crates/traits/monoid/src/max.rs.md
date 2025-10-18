@@ -17,8 +17,8 @@ data:
     path: crates/traits/monoid/src/bitwise_xor.rs
     title: crates/traits/monoid/src/bitwise_xor.rs
   - icon: ':heavy_check_mark:'
-    path: crates/traits/monoid/src/max.rs
-    title: crates/traits/monoid/src/max.rs
+    path: crates/traits/monoid/src/lib.rs
+    title: crates/traits/monoid/src/lib.rs
   - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/max_with_index.rs
     title: crates/traits/monoid/src/max_with_index.rs
@@ -31,21 +31,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/mul.rs
     title: crates/traits/monoid/src/mul.rs
-  - icon: ':warning:'
-    path: crates/traits/numeric/src/bound.rs
-    title: crates/traits/numeric/src/bound.rs
-  - icon: ':warning:'
-    path: crates/traits/numeric/src/infinity.rs
-    title: crates/traits/numeric/src/infinity.rs
-  - icon: ':warning:'
-    path: crates/traits/numeric/src/lib.rs
-    title: crates/traits/numeric/src/lib.rs
-  - icon: ':warning:'
-    path: crates/traits/numeric/src/one.rs
-    title: crates/traits/numeric/src/one.rs
-  - icon: ':warning:'
-    path: crates/traits/numeric/src/zero.rs
-    title: crates/traits/numeric/src/zero.rs
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
@@ -69,8 +54,8 @@ data:
     path: crates/traits/monoid/src/bitwise_xor.rs
     title: crates/traits/monoid/src/bitwise_xor.rs
   - icon: ':heavy_check_mark:'
-    path: crates/traits/monoid/src/max.rs
-    title: crates/traits/monoid/src/max.rs
+    path: crates/traits/monoid/src/lib.rs
+    title: crates/traits/monoid/src/lib.rs
   - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/max_with_index.rs
     title: crates/traits/monoid/src/max_with_index.rs
@@ -110,29 +95,25 @@ data:
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "pub trait Monoid {\n    type ValueType: Clone;\n    fn op(left_value: &Self::ValueType,\
-    \ right_value: &Self::ValueType) -> Self::ValueType;\n    fn unit() -> Self::ValueType;\n\
-    }\n\npub mod add;\npub mod affine;\npub mod bitwise_and;\npub mod bitwise_or;\n\
-    pub mod bitwise_xor;\npub mod max;\npub mod max_with_index;\npub mod min;\npub\
-    \ mod min_with_index;\npub mod mul;\n"
+  code: "use std::marker::PhantomData;\n\nuse crate::Monoid;\nuse numeric::bound::BoundedBelow;\n\
+    \npub struct Max<T>(PhantomData<fn() -> T>);\n\nimpl<T> Monoid for Max<T>\nwhere\n\
+    \    T: Copy + Ord + BoundedBelow,\n{\n    type ValueType = T;\n\n    fn op(left_value:\
+    \ &Self::ValueType, right_value: &Self::ValueType) -> Self::ValueType {\n    \
+    \    std::cmp::max(*left_value, *right_value)\n    }\n\n    fn unit() -> Self::ValueType\
+    \ {\n        T::min_value()\n    }\n}\n"
   dependsOn:
   - crates/traits/monoid/src/add.rs
   - crates/traits/monoid/src/affine.rs
   - crates/traits/monoid/src/bitwise_and.rs
   - crates/traits/monoid/src/bitwise_or.rs
   - crates/traits/monoid/src/bitwise_xor.rs
-  - crates/traits/monoid/src/max.rs
+  - crates/traits/monoid/src/lib.rs
   - crates/traits/monoid/src/max_with_index.rs
   - crates/traits/monoid/src/min.rs
   - crates/traits/monoid/src/min_with_index.rs
   - crates/traits/monoid/src/mul.rs
-  - crates/traits/numeric/src/bound.rs
-  - crates/traits/numeric/src/infinity.rs
-  - crates/traits/numeric/src/lib.rs
-  - crates/traits/numeric/src/one.rs
-  - crates/traits/numeric/src/zero.rs
   isVerificationFile: false
-  path: crates/traits/monoid/src/lib.rs
+  path: crates/traits/monoid/src/max.rs
   requiredBy:
   - crates/ds/segment_tree/segment_tree/src/lib.rs
   - crates/ds/segment_tree/dynamic_segment_tree/src/lib.rs
@@ -144,7 +125,7 @@ data:
   - crates/traits/monoid/src/bitwise_xor.rs
   - crates/traits/monoid/src/min_with_index.rs
   - crates/traits/monoid/src/min.rs
-  - crates/traits/monoid/src/max.rs
+  - crates/traits/monoid/src/lib.rs
   - crates/traits/monoid/src/bitwise_or.rs
   timestamp: '2025-10-18 15:26:53+09:00'
   verificationStatus: LIBRARY_ALL_AC
@@ -154,10 +135,10 @@ data:
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
   - verify/yukicoder/yuki789/yuki789_1/src/main.rs
-documentation_of: crates/traits/monoid/src/lib.rs
+documentation_of: crates/traits/monoid/src/max.rs
 layout: document
 redirect_from:
-- /library/crates/traits/monoid/src/lib.rs
-- /library/crates/traits/monoid/src/lib.rs.html
-title: crates/traits/monoid/src/lib.rs
+- /library/crates/traits/monoid/src/max.rs
+- /library/crates/traits/monoid/src/max.rs.html
+title: crates/traits/monoid/src/max.rs
 ---
