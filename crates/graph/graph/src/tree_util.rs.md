@@ -97,7 +97,7 @@ data:
   - crates/graph/graph/src/shortest_path.rs
   - crates/graph/graph/src/edge.rs
   - crates/graph/graph/src/lib.rs
-  timestamp: '2025-10-14 10:00:12+09:00'
+  timestamp: '2025-10-18 15:13:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/tree/vertex_add_path_sum/src/main.rs

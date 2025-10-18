@@ -62,9 +62,10 @@ data:
   code: "#[derive(Clone)]\npub struct Edge<Cost: Clone> {\n    from: usize,\n    to:\
     \ usize,\n    cost: Cost,\n    id: usize,\n}\n\nimpl<Cost: Clone + Copy> Edge<Cost>\
     \ {\n    pub fn new(from: usize, to: usize, cost: Cost, id: usize) -> Self {\n\
-    \        Self { from, to, cost, id }\n    }\n\n    pub fn to(&self) -> usize {\n\
-    \        self.to\n    }\n\n    pub fn cost(&self) -> Cost {\n        self.cost\n\
-    \    }\n}\n"
+    \        Self { from, to, cost, id }\n    }\n\n    pub fn from(&self) -> usize\
+    \ {\n        self.from\n    }\n\n    pub fn to(&self) -> usize {\n        self.to\n\
+    \    }\n\n    pub fn cost(&self) -> Cost {\n        self.cost\n    }\n\n    pub\
+    \ fn id(&self) -> usize {\n        self.id\n    }\n}\n"
   dependsOn:
   - crates/graph/graph/src/directed_graph_util.rs
   - crates/graph/graph/src/graph.rs
@@ -80,7 +81,7 @@ data:
   - crates/graph/graph/src/graph.rs
   - crates/graph/graph/src/shortest_path.rs
   - crates/graph/graph/src/lib.rs
-  timestamp: '2025-10-14 10:00:12+09:00'
+  timestamp: '2025-10-18 15:13:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/library_checker/tree/vertex_add_path_sum/src/main.rs
