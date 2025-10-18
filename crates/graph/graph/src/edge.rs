@@ -11,11 +11,19 @@ impl<Cost: Clone + Copy> Edge<Cost> {
         Self { from, to, cost, id }
     }
 
+    pub fn from(&self) -> usize {
+        self.from
+    }
+
     pub fn to(&self) -> usize {
         self.to
     }
 
     pub fn cost(&self) -> Cost {
         self.cost
+    }
+
+    pub fn id(&self) -> usize {
+        self.id
     }
 }
