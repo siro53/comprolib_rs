@@ -1,7 +1,7 @@
 // verification-helper: PROBLEM https://yukicoder.me/problems/no/789
 
 use dynamic_segment_tree::DynamicSegmentTree;
-use monoid_util::add::Additive;
+use monoid::add::Additive;
 use proconio::{fastout, input};
 
 type DynamicSegTree = DynamicSegmentTree<Additive<i64>, 0, 1_000_000_002>;

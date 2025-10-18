@@ -3,7 +3,7 @@ use std::{
     ops::{BitAnd, Not},
 };
 
-use monoid::Monoid;
+use crate::Monoid;
 use numeric::zero::Zero;
 
 pub struct BitwiseAnd<T>(PhantomData<fn() -> T>);

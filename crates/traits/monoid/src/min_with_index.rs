@@ -1,6 +1,6 @@
 use std::marker::PhantomData;
 
-use monoid::Monoid;
+use crate::Monoid;
 use numeric::bound::BoundedAbove;
 
 #[derive(Clone, Copy)]

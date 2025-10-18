@@ -1,6 +1,6 @@
 use std::{marker::PhantomData, ops::Mul};
 
-use monoid::Monoid;
+use crate::Monoid;
 use numeric::one::One;
 
 pub struct Multiplicative<T>(PhantomData<fn() -> T>);

@@ -1,6 +1,6 @@
 use std::{marker::PhantomData, ops::Add};
 
-use monoid::Monoid;
+use crate::Monoid;
 use numeric::zero::Zero;
 
 pub struct Additive<T>(PhantomData<fn() -> T>);

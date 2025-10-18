@@ -3,7 +3,7 @@ use std::{
     ops::{Add, Mul},
 };
 
-use monoid::Monoid;
+use crate::Monoid;
 use numeric::{one::One, zero::Zero};
 
 #[derive(Clone)]

@@ -4,7 +4,7 @@ use graph::graph::Tree;
 use heavy_light_decomposition::HeavyLightDecomposition;
 use modint::ModInt998244353;
 use monoid::Monoid;
-use monoid_util::affine::{Affine, AffineOperator};
+use monoid::affine::{Affine, AffineOperator};
 use proconio::{fastout, input};
 use segment_tree::SegmentTree;
 

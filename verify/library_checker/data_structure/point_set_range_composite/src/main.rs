@@ -1,7 +1,7 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite
 
 use modint::ModInt998244353;
-use monoid_util::affine::{Affine, AffineOperator};
+use monoid::affine::{Affine, AffineOperator};
 use proconio::{fastout, input};
 use segment_tree::SegmentTree;
 

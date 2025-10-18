@@ -105,12 +105,7 @@ dependencies = [
 [[package]]
 name = "monoid"
 version = "0.1.0"
-
-[[package]]
-name = "monoid_util"
-version = "0.1.0"
 dependencies = [
- "monoid",
  "numeric",
 ]
 
@@ -123,7 +118,7 @@ name = "point_set_range_composite"
 version = "0.1.0"
 dependencies = [
  "modint",
- "monoid_util",
+ "monoid",
  "proconio",
  "segment_tree",
 ]
@@ -295,7 +290,7 @@ version = "0.1.0"
 dependencies = [
  "dynamic_segment_tree",
  "modint",
- "monoid_util",
+ "monoid",
  "proconio",
 ]
 
@@ -311,7 +306,7 @@ dependencies = [
 name = "verify_segment_tree"
 version = "0.1.0"
 dependencies = [
- "monoid_util",
+ "monoid",
  "proconio",
  "segment_tree",
 ]
@@ -344,7 +339,6 @@ dependencies = [
  "heavy_light_decomposition",
  "modint",
  "monoid",
- "monoid_util",
  "proconio",
  "segment_tree",
 ]
@@ -386,7 +380,7 @@ name = "yuki789_1"
 version = "0.1.0"
 dependencies = [
  "dynamic_segment_tree",
- "monoid_util",
+ "monoid",
  "proconio",
 ]
 

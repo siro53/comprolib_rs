@@ -1,6 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_add_range_sum
 
-use monoid_util::add::Additive;
+use monoid::add::Additive;
 use proconio::{fastout, input};
 use segment_tree::SegmentTree;
 

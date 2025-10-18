@@ -1,6 +1,6 @@
 use std::{marker::PhantomData, ops::BitXor};
 
-use monoid::Monoid;
+use crate::Monoid;
 use numeric::zero::Zero;
 
 pub struct BitwiseXor<T>(PhantomData<fn() -> T>);

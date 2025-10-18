@@ -2,7 +2,7 @@
 
 use dynamic_segment_tree::DynamicSegmentTree;
 use modint::ModInt998244353;
-use monoid_util::affine::{Affine, AffineOperator};
+use monoid::affine::{Affine, AffineOperator};
 use proconio::{fastout, input};
 
 type Mint = ModInt998244353;

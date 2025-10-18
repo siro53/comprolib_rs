@@ -4,7 +4,6 @@ members = [
   "crates/ds/segment_tree/segment_tree",
   "crates/traits/monoid",
   "crates/traits/numeric",
-  "crates/util/monoid_util",
   "verify/library_checker/data_structure/unionfind",
   "crates/modint",
   "verify/library_checker/data_structure/point_set_range_composite",
