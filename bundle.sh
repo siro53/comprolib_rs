@@ -8,6 +8,7 @@
 #   -o, --output FILE     出力ファイル名 (デフォルト: submit.rs)
 #   -c, --clipboard       クリップボードにコピー
 #   -e, --exclude CRATE   除外するクレート (デフォルト: proconio)
+#   --exclude-atcoder     AtCoder提供の全クレートを除外
 #   --no-exclude          proconioを除外しない
 #   -h, --help            ヘルプを表示
 
@@ -19,6 +20,9 @@ OUTPUT_FILE="submit.rs"
 CLIPBOARD=false
 EXCLUDE_CRATES="proconio"
 EXCLUDE_FLAG="--exclude proconio"
+
+# AtCoderで提供されているクレート一覧
+ATCODER_CRATES="ac-library-rs once_cell static_assertions varisat memoise argio bitvec counter hashbag pathfinding recur-fn indexing amplify amplify_derive amplify_num easy-ext multimap btreemultimap bstr az glidesort tap omniswap multiversion num num-bigint num-complex num-integer num-iter num-rational num-traits num-derive ndarray nalgebra alga libm rand getrandom rand_chacha rand_core rand_hc rand_pcg rand_distr petgraph indexmap regex lazy_static ordered-float ascii permutohedron superslice itertools itertools-num maplit either im-rc fixedbitset bitset-fixed proconio text_io rustc-hash smallvec"
 
 # ヘルプ表示
 show_help() {
@@ -32,16 +36,18 @@ AtCoder提出用コードbundleスクリプト
   -o, --output FILE     出力ファイル名 (デフォルト: submit.rs)
   -c, --clipboard       クリップボードにコピー
   -e, --exclude CRATE   除外するクレートを追加
+  --exclude-atcoder     AtCoder提供の全クレートを除外
   --no-exclude          proconioを除外しない
   -h, --help            このヘルプを表示
 
 例:
-  $0                                    # submit.rsに出力
+  $0                                    # submit.rsに出力 (proconioのみ除外)
   $0 -b abc123_d                        # バイナリ名を指定
   $0 -c                                 # クリップボードにコピー
   $0 -o bundled.rs                      # 出力ファイル名を指定
   $0 --no-exclude                       # proconioも展開
-  $0 -e itertools -e superslice        # 複数のクレートを除外
+  $0 -e itertools -e superslice         # 複数のクレートを除外
+  $0 --exclude-atcoder                  # AtCoder提供の全クレートを除外
 
 EOF
 }
@@ -66,6 +72,14 @@ while [[ $# -gt 0 ]]; do
             EXCLUDE_FLAG="$EXCLUDE_FLAG --exclude $2"
             shift 2
             ;;
+        --exclude-atcoder)
+            EXCLUDE_CRATES="$ATCODER_CRATES"
+            EXCLUDE_FLAG=""
+            for crate in $ATCODER_CRATES; do
+                EXCLUDE_FLAG="$EXCLUDE_FLAG --exclude $crate"
+            done
+            shift
+            ;;
         --no-exclude)
             EXCLUDE_FLAG=""
             shift
@@ -83,7 +97,8 @@ while [[ $# -gt 0 ]]; do
 done
 
 # cargo equipコマンドを構築
-CARGO_EQUIP_CMD="cargo equip --bin $BIN_NAME $EXCLUDE_FLAG --remove docs --minify libs"
+# --mine オプションで自分のクレートを指定し、ライセンス表記の問題を回避
+CARGO_EQUIP_CMD="cargo equip --bin $BIN_NAME $EXCLUDE_FLAG --remove docs --minify libs --no-check"
 
 echo "=== AtCoder提出用コードbundle ==="
 echo "バイナリ名: $BIN_NAME"

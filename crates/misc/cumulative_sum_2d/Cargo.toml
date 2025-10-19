@@ -2,6 +2,7 @@
 name = "cumulative_sum_2d"
 version = "0.1.0"
 edition = "2021"
+license = "Unlicense"
 
 [dependencies]
 numeric = { version = "0.1.0", path = "../../traits/numeric" }

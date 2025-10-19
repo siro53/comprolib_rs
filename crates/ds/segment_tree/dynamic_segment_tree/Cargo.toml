@@ -2,6 +2,7 @@
 name = "dynamic_segment_tree"
 version = "0.1.0"
 edition = "2021"
+license = "Unlicense"
 
 [dependencies]
 monoid = { version = "0.1.0", path = "../../../traits/monoid" }

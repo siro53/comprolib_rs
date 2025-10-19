@@ -2,6 +2,7 @@
 name = "heavy_light_decomposition"
 version = "0.1.0"
 edition = "2021"
+license = "Unlicense"
 
 [dependencies]
 graph = { version = "0.1.0", path = "../graph" }
