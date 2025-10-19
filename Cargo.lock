@@ -133,6 +133,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "prelude"
+version = "0.1.0"
+dependencies = [
+ "binary_trie",
+ "compress",
+ "cumulative_sum_2d",
+ "dsu",
+ "dynamic_segment_tree",
+ "fenwick_tree",
+ "graph",
+ "heavy_light_decomposition",
+ "mo",
+ "modint",
+ "monoid",
+ "numeric",
+ "rle",
+ "segment_tree",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"

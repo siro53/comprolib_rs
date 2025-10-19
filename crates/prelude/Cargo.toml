@@ -1,0 +1,31 @@
+[package]
+name = "prelude"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Data Structures
+dsu = { version = "0.1.0", path = "../ds/dsu" }
+segment_tree = { version = "0.1.0", path = "../ds/segment_tree/segment_tree" }
+dynamic_segment_tree = { version = "0.1.0", path = "../ds/segment_tree/dynamic_segment_tree" }
+fenwick_tree = { version = "0.1.0", path = "../ds/fenwick_tree" }
+binary_trie = { version = "0.1.0", path = "../ds/binary_trie" }
+
+# Traits
+monoid = { version = "0.1.0", path = "../traits/monoid" }
+numeric = { version = "0.1.0", path = "../traits/numeric" }
+
+# Algorithms
+mo = { version = "0.1.0", path = "../algo/mo" }
+
+# Graph
+graph = { version = "0.1.0", path = "../graph/graph" }
+heavy_light_decomposition = { version = "0.1.0", path = "../graph/heavy_light_decomposition" }
+
+# Misc
+compress = { version = "0.1.0", path = "../misc/compress" }
+cumulative_sum_2d = { version = "0.1.0", path = "../misc/cumulative_sum_2d" }
+rle = { version = "0.1.0", path = "../misc/rle" }
+
+# Modint
+modint = { version = "0.1.0", path = "../modint" }

@@ -118,27 +118,32 @@ cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs > sub
 ### ディレクトリ構成
 ```
 crates/
+├── algo/            # アルゴリズム
+│   └── mo/          # Mo's Algorithm
 ├── ds/              # データ構造
+│   ├── binary_trie/ # Binary Trie
 │   ├── dsu/         # Union-Find（Disjoint Set Union）
-│   ├── fenwick_tree/     # Fenwick Tree（Binary Indexed Tree）
-│   └── segment_tree/     # セグメント木
+│   ├── fenwick_tree/ # Fenwick Tree（Binary Indexed Tree）
+│   └── segment_tree/ # セグメント木
 │       ├── segment_tree/        # 通常のセグメント木
 │       └── dynamic_segment_tree/ # 動的セグメント木
-├── traits/          # 共通トレイト
-│   ├── monoid/      # Monoidトレイト
-│   └── numeric/     # 数値系トレイト（Zero, One, Bound, Infinity）
-├── util/           # ユーティリティ
-│   └── monoid_util/ # 具体的なMonoid実装（Add, Min, Max, Affine等）
-├── modint/         # 剰余体
-└── misc/           # その他のアルゴリズム
-    ├── compress/    # 座標圧縮
-    ├── cumulative_sum_2d/ # 2次元累積和
-    └── rle/         # ランレングス圧縮
+├── graph/           # グラフアルゴリズム
+│   ├── graph/       # グラフの基本実装
+│   └── heavy_light_decomposition/ # Heavy-Light Decomposition
+├── misc/            # その他のアルゴリズム
+│   ├── compress/    # 座標圧縮
+│   ├── cumulative_sum_2d/ # 2次元累積和
+│   └── rle/         # ランレングス圧縮
+├── modint/          # 剰余体
+├── prelude/         # 全クレートの再エクスポート（簡単にimportするため）
+└── traits/          # 共通トレイト
+    ├── monoid/      # Monoidトレイト
+    └── numeric/     # 数値系トレイト（Zero, One, Bound, Infinity）
 
-verify/             # 検証用コード
+verify/              # 検証用コード
 ├── library_checker/ # Library Checkerでの検証
-├── aoj/            # AOJ（Aizu Online Judge）での検証
-└── yukicoder/      # yukicoderでの検証
+├── aoj/             # AOJ（Aizu Online Judge）での検証
+└── yukicoder/       # yukicoderでの検証
 ```
 
 ### 重要な設計パターン
@@ -149,17 +154,50 @@ verify/             # 検証用コード
 
 ### クレート間の依存関係
 - `traits/monoid` と `traits/numeric` が基盤トレイト
-- `util/monoid_util` で具体的なMonoid実装を提供
-- データ構造クレートは必要に応じて上記トレイトに依存
-- 検証用クレートは対応する実装クレートに依存
+- データ構造クレート（`segment_tree`, `fenwick_tree`等）は必要に応じて上記トレイトに依存
+- グラフ系クレートは `graph` クレートを基盤として使用
+- `prelude` クレートは全てのクレートを依存関係に含み、一括でインポート可能にする
+- 検証用クレートは対応する実装クレートに依存（または`prelude`を使用）
+
+## preludeクレートの使い方
+
+`prelude`クレートを使うと、すべてのライブラリクレートを簡単にインポートできます：
+
+```toml
+[dependencies]
+prelude = { path = "../../../crates/prelude" }
+proconio = "0.5.0"
+```
+
+```rust
+use prelude::*;
+
+// すべてのクレートが使用可能
+use dsu::DSU;
+use segment_tree::SegmentTree;
+use modint::ModInt998244353;
+use graph::Graph;
+// など
+```
+
+**利点:**
+- 複数のクレートを個別に依存関係に追加する手間が省ける
+- 新しいクレートが追加された際も、preludeを更新するだけで利用可能
+- 検証コードや問題を解くコードで統一的に使用できる
+
+**注意:**
+- `cargo-equip`でbundleする際は、preludeに含まれるすべてのクレートが展開されるため、使用しないクレートも含まれる可能性があります
+- 提出コードのサイズが気になる場合は、必要なクレートのみを個別に依存関係に追加することを検討してください
 
 ## 新機能追加時の流れ
 
 1. `crates/`下の適切なカテゴリに新しいクレートを作成
 2. ワークスペースの`Cargo.toml`にメンバーとして追加
-3. `verify/`下に対応する検証コードを作成（問題URLをコメントで記載）
-4. 検証コードでは`// verification-helper: PROBLEM <URL>`でオンラインジャッジの問題を指定
-5. GitHub Actionsで自動検証を実行
+3. 新しいクレートを`crates/prelude/Cargo.toml`の依存関係に追加
+4. 新しいクレートを`crates/prelude/src/lib.rs`で再エクスポート
+5. `verify/`下に対応する検証コードを作成（問題URLをコメントで記載）
+6. 検証コードでは`// verification-helper: PROBLEM <URL>`でオンラインジャッジの問題を指定
+7. GitHub Actionsで自動検証を実行
 
 ## AtCoder用コードの作成とbundle
 
@@ -173,9 +211,15 @@ cd atcoder/abc123/d
 cargo init --name abc123_d
 
 # Cargo.tomlで必要なクレートを依存に追加
+# 個別に指定する場合：
 # [dependencies]
 # segment_tree = { path = "../../../crates/ds/segment_tree/segment_tree" }
 # monoid = { path = "../../../crates/traits/monoid" }
+# proconio = "0.5.0"
+
+# または prelude を使う場合（推奨）：
+# [dependencies]
+# prelude = { path = "../../../crates/prelude" }
 # proconio = "0.5.0"
 ```
 
@@ -209,10 +253,16 @@ cargo equip --bin abc123_d --exclude proconio --remove docs --minify libs > subm
 検証用のクレートは実装クレートに依存し、問題を解くための実行ファイルとして作成される：
 
 ```toml
+# 個別にクレートを指定する場合
 [dependencies]
 segment_tree = { path = "../../../crates/ds/segment_tree/segment_tree" }
-monoid_util = { path = "../../../crates/util/monoid_util" }
-proconio = "0.4"
+monoid = { path = "../../../crates/traits/monoid" }
+proconio = "0.5.0"
+
+# または prelude を使って一括で依存関係を追加（推奨）
+[dependencies]
+prelude = { path = "../../../crates/prelude" }
+proconio = "0.5.0"
 ```
 
 ### 使用可能なオンラインジャッジ
