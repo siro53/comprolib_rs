@@ -19,7 +19,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/graph/graph/src/tree_util.rs
     title: crates/graph/graph/src/tree_util.rs
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/tree/vertex_add_path_sum/src/main.rs
@@ -122,7 +125,8 @@ data:
   - crates/graph/graph/src/tree_util.rs
   isVerificationFile: false
   path: crates/graph/heavy_light_decomposition/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - crates/prelude/src/lib.rs
   timestamp: '2025-10-18 15:13:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

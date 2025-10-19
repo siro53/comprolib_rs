@@ -29,6 +29,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/modint/src/lib.rs
     title: crates/modint/src/lib.rs
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/lib.rs
     title: crates/traits/monoid/src/lib.rs
@@ -82,6 +85,7 @@ data:
   - crates/traits/numeric/src/infinity.rs
   - crates/traits/numeric/src/lib.rs
   - crates/traits/monoid/src/lib.rs
+  - crates/prelude/src/lib.rs
   - crates/graph/graph/src/lib.rs
   timestamp: '2025-08-31 11:54:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS

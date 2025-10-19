@@ -88,6 +88,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/modint/src/static_modint.rs
       title: crates/modint/src/static_modint.rs
+  - name: crates/prelude/src
+    pages:
+    - icon: ':warning:'
+      path: crates/prelude/src/lib.rs
+      title: crates/prelude/src/lib.rs
   - name: crates/traits/monoid/src
     pages:
     - icon: ':heavy_check_mark:'

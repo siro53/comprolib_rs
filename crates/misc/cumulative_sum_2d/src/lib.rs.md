@@ -16,7 +16,10 @@ data:
   - icon: ':warning:'
     path: crates/traits/numeric/src/zero.rs
     title: crates/traits/numeric/src/zero.rs
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/aoj/aoj2426/src/main.rs
@@ -69,7 +72,8 @@ data:
   - crates/traits/numeric/src/zero.rs
   isVerificationFile: false
   path: crates/misc/cumulative_sum_2d/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - crates/prelude/src/lib.rs
   timestamp: '2025-08-31 23:58:05+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

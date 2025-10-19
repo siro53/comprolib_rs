@@ -16,7 +16,10 @@ data:
   - icon: ':warning:'
     path: crates/traits/numeric/src/zero.rs
     title: crates/traits/numeric/src/zero.rs
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/set_xor_min/src/main.rs
@@ -152,7 +155,8 @@ data:
   - crates/traits/numeric/src/zero.rs
   isVerificationFile: false
   path: crates/ds/binary_trie/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - crates/prelude/src/lib.rs
   timestamp: '2025-10-13 14:17:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

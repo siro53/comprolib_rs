@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/unionfind/src/main.rs
@@ -58,7 +61,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: crates/ds/dsu/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - crates/prelude/src/lib.rs
   timestamp: '2025-10-14 09:57:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

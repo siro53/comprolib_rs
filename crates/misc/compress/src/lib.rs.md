@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/aoj/aoj2426/src/main.rs
@@ -40,7 +43,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: crates/misc/compress/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - crates/prelude/src/lib.rs
   timestamp: '2025-09-15 18:36:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

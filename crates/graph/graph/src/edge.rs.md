@@ -35,6 +35,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/graph/heavy_light_decomposition/src/lib.rs
     title: crates/graph/heavy_light_decomposition/src/lib.rs
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/tree/tree_diameter/src/main.rs
@@ -75,6 +78,7 @@ data:
   isVerificationFile: false
   path: crates/graph/graph/src/edge.rs
   requiredBy:
+  - crates/prelude/src/lib.rs
   - crates/graph/heavy_light_decomposition/src/lib.rs
   - crates/graph/graph/src/tree_util.rs
   - crates/graph/graph/src/directed_graph_util.rs

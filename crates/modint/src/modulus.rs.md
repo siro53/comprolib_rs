@@ -14,6 +14,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/modint/src/static_modint.rs
     title: crates/modint/src/static_modint.rs
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_set_range_composite/src/main.rs
@@ -45,6 +48,7 @@ data:
   requiredBy:
   - crates/modint/src/static_modint.rs
   - crates/modint/src/lib.rs
+  - crates/prelude/src/lib.rs
   timestamp: '2025-08-31 18:19:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

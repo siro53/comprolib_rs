@@ -34,7 +34,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/mul.rs
     title: crates/traits/monoid/src/mul.rs
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
@@ -130,7 +133,8 @@ data:
   - crates/traits/monoid/src/mul.rs
   isVerificationFile: false
   path: crates/ds/segment_tree/segment_tree/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - crates/prelude/src/lib.rs
   timestamp: '2025-10-18 15:26:53+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

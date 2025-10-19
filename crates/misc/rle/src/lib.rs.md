@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
@@ -26,7 +29,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: crates/misc/rle/src/lib.rs
-  requiredBy: []
+  requiredBy:
+  - crates/prelude/src/lib.rs
   timestamp: '2025-09-06 15:29:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

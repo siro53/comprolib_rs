@@ -38,6 +38,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/ds/segment_tree/segment_tree/src/lib.rs
     title: crates/ds/segment_tree/segment_tree/src/lib.rs
+  - icon: ':warning:'
+    path: crates/prelude/src/lib.rs
+    title: crates/prelude/src/lib.rs
   - icon: ':heavy_check_mark:'
     path: crates/traits/monoid/src/add.rs
     title: crates/traits/monoid/src/add.rs
@@ -131,6 +134,7 @@ data:
   - crates/traits/monoid/src/max.rs
   - crates/traits/monoid/src/lib.rs
   - crates/traits/monoid/src/bitwise_or.rs
+  - crates/prelude/src/lib.rs
   timestamp: '2025-10-18 15:26:53+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
