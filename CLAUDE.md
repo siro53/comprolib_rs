@@ -45,24 +45,68 @@ cargo clippy --workspace
 ```
 
 ### AtCoder提出用のコードbundle
+
+#### bundle.sh スクリプトを使用（推奨）
+ルートディレクトリに`bundle.sh`スクリプトを提供しています。カレントディレクトリで実行するだけで簡単にbundleできます：
+
 ```bash
-# cargo-equipを使用して依存クレートを1ファイルにbundle
-# proconioなどAtCoder標準クレートは除外される
+# カレントディレクトリでbundle（最もシンプル）
+cd verify/library_checker/data_structure/unionfind
+../../../../bundle.sh
+
+# クリップボードにコピー（WSL/Linux/macOS対応）
+# clip.exe, pbcopy, xclip, xselを自動検出
+../../../../bundle.sh -c
+
+# バイナリ名を明示的に指定
+../../../../bundle.sh -b unionfind
+
+# 出力ファイル名を指定
+../../../../bundle.sh -o bundled.rs
+
+# proconioも展開する場合（通常は不要）
+../../../../bundle.sh --no-exclude
+
+# 複数のクレートを除外
+../../../../bundle.sh -e itertools -e superslice
+
+# ヘルプを表示
+../../../../bundle.sh -h
+```
+
+**スクリプトの特徴:**
+- カレントディレクトリ名から自動的にバイナリ名を推測
+- クリップボードツールを自動検出（`clip.exe`, `pbcopy`, `xclip`, `xsel`）
+- デフォルトで`proconio`を除外（AtCoderでは標準提供のため）
+- ファイルサイズと行数を表示
+- `submit.rs`に出力（デフォルト）
+
+#### cargo-equipを直接使用
+より細かい制御が必要な場合は、`cargo-equip`を直接使用できます：
+
+```bash
+# 基本的な使い方
 cd verify/yukicoder/yuki789/yuki789_1
 cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs
 
 # 出力されたコードをクリップボードにコピー
-cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs | pbcopy  # macOS
+cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs | clip.exe      # WSL
+cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs | pbcopy        # macOS
 cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs | xclip -selection clipboard  # Linux
 
 # ファイルに保存
-cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs > bundled.rs
+cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs > submit.rs
 ```
 
-**オプションの説明:**
+**cargo-equipオプションの説明:**
 - `--exclude proconio`: AtCoderで標準提供されているクレートを除外
 - `--remove docs`: ドキュメントコメントを削除してコードサイズを削減
 - `--minify libs`: bundleされたライブラリ部分をminify（1行化）
+
+**注意事項:**
+- `proconio`のような外部クレート（crates.ioからのクレート）でproc-macroを使用しているものは展開が困難です
+- 基本的には**自作のpath依存クレートのみを展開**し、**外部クレートは除外**するのが標準的な使い方です
+- AtCoderでは`proconio`は標準提供されているため、除外することを推奨します
 
 ## コードベースの構造
 
@@ -136,6 +180,16 @@ cargo init --name abc123_d
 ```
 
 ### bundleして提出
+`bundle.sh`スクリプトを使用（推奨）：
+
+```bash
+cd atcoder/abc123/d
+../../../bundle.sh -c
+# クリップボードにコピーされるので、AtCoderに貼り付けて提出
+```
+
+または`cargo-equip`を直接使用：
+
 ```bash
 cd atcoder/abc123/d
 cargo equip --bin abc123_d --exclude proconio --remove docs --minify libs > submit.rs
