@@ -44,6 +44,26 @@ cargo fmt
 cargo clippy --workspace
 ```
 
+### AtCoder提出用のコードbundle
+```bash
+# cargo-equipを使用して依存クレートを1ファイルにbundle
+# proconioなどAtCoder標準クレートは除外される
+cd verify/yukicoder/yuki789/yuki789_1
+cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs
+
+# 出力されたコードをクリップボードにコピー
+cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs | pbcopy  # macOS
+cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs | xclip -selection clipboard  # Linux
+
+# ファイルに保存
+cargo equip --bin yuki789_1 --exclude proconio --remove docs --minify libs > bundled.rs
+```
+
+**オプションの説明:**
+- `--exclude proconio`: AtCoderで標準提供されているクレートを除外
+- `--remove docs`: ドキュメントコメントを削除してコードサイズを削減
+- `--minify libs`: bundleされたライブラリ部分をminify（1行化）
+
 ## コードベースの構造
 
 ### アーキテクチャの概要
@@ -96,6 +116,31 @@ verify/             # 検証用コード
 3. `verify/`下に対応する検証コードを作成（問題URLをコメントで記載）
 4. 検証コードでは`// verification-helper: PROBLEM <URL>`でオンラインジャッジの問題を指定
 5. GitHub Actionsで自動検証を実行
+
+## AtCoder用コードの作成とbundle
+
+### 問題を解くコードの作成
+AtCoderの問題を解く際は、検証用クレートと同様の構造を使用します：
+
+```bash
+# 例：AtCoder ABC123のD問題
+mkdir -p atcoder/abc123/d
+cd atcoder/abc123/d
+cargo init --name abc123_d
+
+# Cargo.tomlで必要なクレートを依存に追加
+# [dependencies]
+# segment_tree = { path = "../../../crates/ds/segment_tree/segment_tree" }
+# monoid = { path = "../../../crates/traits/monoid" }
+# proconio = "0.5.0"
+```
+
+### bundleして提出
+```bash
+cd atcoder/abc123/d
+cargo equip --bin abc123_d --exclude proconio --remove docs --minify libs > submit.rs
+# submit.rs の内容をAtCoderに提出
+```
 
 ## 検証について
 

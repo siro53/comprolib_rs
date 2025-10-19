@@ -1,4 +1,5 @@
 [workspace]
+resolver = "2"
 members = [
   "crates/ds/dsu",
   "crates/ds/segment_tree/segment_tree",

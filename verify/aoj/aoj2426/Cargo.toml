@@ -1,7 +1,7 @@
 [package]
 name = "aoj2426"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 compress = { version = "0.1.0", path = "../../../crates/misc/compress" }
