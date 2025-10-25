@@ -138,9 +138,9 @@ data:
   timestamp: '2025-10-18 15:26:53+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
-  - verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
+  - verify/library_checker/data_structure/point_add_range_sum/verify_segment_tree/src/main.rs
+  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
 documentation_of: crates/ds/segment_tree/segment_tree/src/lib.rs
 layout: document
 redirect_from:

@@ -72,6 +72,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: crates/misc/cumulative_sum_2d/src/lib.rs
       title: crates/misc/cumulative_sum_2d/src/lib.rs
+  - name: crates/misc/fraction/src
+    pages:
+    - icon: ':warning:'
+      path: crates/misc/fraction/src/lib.rs
+      title: crates/misc/fraction/src/lib.rs
   - name: crates/misc/rle/src
     pages:
     - icon: ':heavy_check_mark:'

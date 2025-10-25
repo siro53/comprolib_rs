@@ -70,15 +70,15 @@ data:
   isVerificationFile: false
   path: crates/modint/src/lib.rs
   requiredBy:
+  - crates/prelude/src/lib.rs
   - crates/modint/src/static_modint.rs
   - crates/modint/src/modulus.rs
-  - crates/prelude/src/lib.rs
   timestamp: '2025-08-31 18:19:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite/src/main.rs
   - verify/library_checker/data_structure/point_set_range_composite_large_array/verify_dynamic_segment_tree/src/main.rs
+  - verify/library_checker/tree/vertex_set_path_composite/src/main.rs
 documentation_of: crates/modint/src/lib.rs
 layout: document
 redirect_from:

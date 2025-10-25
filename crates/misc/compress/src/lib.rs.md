@@ -48,8 +48,8 @@ data:
   timestamp: '2025-09-15 18:36:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/aoj/aoj2426/src/main.rs
   - verify/library_checker/data_structure/static_range_inversions_query/src/main.rs
+  - verify/aoj/aoj2426/src/main.rs
 documentation_of: crates/misc/compress/src/lib.rs
 layout: document
 redirect_from:

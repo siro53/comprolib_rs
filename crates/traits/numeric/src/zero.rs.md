@@ -26,6 +26,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: crates/misc/cumulative_sum_2d/src/lib.rs
     title: crates/misc/cumulative_sum_2d/src/lib.rs
+  - icon: ':warning:'
+    path: crates/misc/fraction/src/lib.rs
+    title: crates/misc/fraction/src/lib.rs
   - icon: ':heavy_check_mark:'
     path: crates/modint/src/lib.rs
     title: crates/modint/src/lib.rs
@@ -76,16 +79,17 @@ data:
   isVerificationFile: false
   path: crates/traits/numeric/src/zero.rs
   requiredBy:
-  - crates/modint/src/lib.rs
-  - crates/ds/binary_trie/src/lib.rs
-  - crates/ds/fenwick_tree/src/lib.rs
-  - crates/misc/cumulative_sum_2d/src/lib.rs
+  - crates/prelude/src/lib.rs
+  - crates/traits/monoid/src/lib.rs
+  - crates/traits/numeric/src/lib.rs
   - crates/traits/numeric/src/bound.rs
   - crates/traits/numeric/src/one.rs
   - crates/traits/numeric/src/infinity.rs
-  - crates/traits/numeric/src/lib.rs
-  - crates/traits/monoid/src/lib.rs
-  - crates/prelude/src/lib.rs
+  - crates/ds/fenwick_tree/src/lib.rs
+  - crates/ds/binary_trie/src/lib.rs
+  - crates/modint/src/lib.rs
+  - crates/misc/cumulative_sum_2d/src/lib.rs
+  - crates/misc/fraction/src/lib.rs
   - crates/graph/graph/src/lib.rs
   timestamp: '2025-08-31 11:54:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
