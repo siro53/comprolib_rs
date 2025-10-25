@@ -6,11 +6,11 @@ where
         return Vec::<(T, usize)>::new();
     }
     let mut res = vec![(v[0], 1_usize)];
-    for e in v {
-        if res.last().unwrap().0 == *e {
+    for i in 1..v.len() {
+        if res.last().unwrap().0 == v[i] {
             res.last_mut().unwrap().1 += 1;
         } else {
-            res.push((*e, 1));
+            res.push((v[i], 1));
         }
     }
     res
