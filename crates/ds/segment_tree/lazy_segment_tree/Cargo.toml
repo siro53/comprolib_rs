@@ -1,0 +1,8 @@
+[package]
+name = "lazy_segment_tree"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+act = { version = "0.1.0", path = "../../../traits/act" }
+monoid = { version = "0.1.0", path = "../../../traits/monoid" }

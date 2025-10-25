@@ -3,6 +3,13 @@
 version = 4
 
 [[package]]
+name = "act"
+version = "0.1.0"
+dependencies = [
+ "monoid",
+]
+
+[[package]]
 name = "aoj2426"
 version = "0.1.0"
 dependencies = [
@@ -90,6 +97,14 @@ name = "heavy_light_decomposition"
 version = "0.1.0"
 dependencies = [
  "graph",
+]
+
+[[package]]
+name = "lazy_segment_tree"
+version = "0.1.0"
+dependencies = [
+ "act",
+ "monoid",
 ]
 
 [[package]]

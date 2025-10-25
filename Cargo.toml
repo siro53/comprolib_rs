@@ -31,4 +31,6 @@ members = [
   "verify/library_checker/tree/vertex_set_path_composite",
   "crates/prelude",
   "crates/misc/fraction",
+  "crates/ds/segment_tree/lazy_segment_tree",
+  "crates/traits/act",
 ]
