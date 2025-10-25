@@ -29,7 +29,7 @@ data:
   isVerificationFile: true
   path: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
   requiredBy: []
-  timestamp: '2025-09-06 15:34:11+09:00'
+  timestamp: '2025-10-25 22:09:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/yukicoder/yuki1469/yuki1469_1/src/main.rs
